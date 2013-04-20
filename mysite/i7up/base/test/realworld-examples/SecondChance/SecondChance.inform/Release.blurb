@@ -1,0 +1,37 @@
+! Blurb file created by Inform build 6G60
+
+status "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\CblorbModel.html" "C:\Users\Tag\Documents\Cal Poly Classes\Third Year\Spring '12\CPE 478\Projects\IF\Second Chance.inform\Build\StatusCblorb.html"
+
+
+! Identification
+
+project folder "C:\Users\Tag\Documents\Cal Poly Classes\Third Year\Spring '12\CPE 478\Projects\IF\Second Chance.inform"
+release to "C:\Users\Tag\Documents\Cal Poly Classes\Third Year\Spring '12\CPE 478\Projects\IF\Second Chance Materials\Release"
+
+! Blorb instructions
+
+storyfile leafname "Second Chance.zblorb"
+storyfile "C:\Users\Tag\Documents\Cal Poly Classes\Third Year\Spring '12\CPE 478\Projects\IF\Second Chance.inform\Build\output.z5" include
+ifiction "C:\Users\Tag\Documents\Cal Poly Classes\Third Year\Spring '12\CPE 478\Projects\IF\Second Chance.inform\Metadata.iFiction" include
+cover "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
+picture 1 "C:\Program Files (x86)\Inform 7\Inform7\Extensions\Reserved\DefaultCover.jpg"
+
+! Placeholder variables
+
+placeholder [IFID] = "32DF2760-CEE2-4C46-AEC5-942482F9DA58"
+placeholder [RELEASE] = "1"
+placeholder [YEAR] = "2012"
+placeholder [TITLE] = "Second Chance"
+placeholder [AUTHOR] = "Tag"
+placeholder [BLURB] = "A work of interactive fiction."
+
+! Other material to release
+
+status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc391.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with a website'&nbsp;<a href=inform:/doc393.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc394.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the "Such-and-Such" file called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc389.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc398.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the library card'&nbsp;<a href=inform:/doc399.html><img border=0 src=inform:/help.png></a>||
+status alternative ||Using 'Release along with the introductory booklet'&nbsp;<a href=inform:/doc392.html><img border=0 src=inform:/help.png></a>||

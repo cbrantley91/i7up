@@ -1,0 +1,15 @@
+import nltk
+from nltk.tag.simplify import simplify_wsj_tag
+
+#Sentence has:
+# raw_sent - the raw string of the sentence
+# quoted - whether or not it is a quoted sentence or not
+# sub_sents - list of sentences inside this one (all should be quoted)
+class Sentence:
+    def __init__(self, raw, quotation = false):
+        self.raw_sent = raw
+        self.sub_sents = []
+        self.quoted = quotation
+        
+        def __repr__(self):
+        if self.isQuoted:

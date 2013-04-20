@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-0x02E7D440" xmlns="http://www.logicalshift.org.uk/IF/Skein">
+  <generator>Inform 7 for Windows</generator>
+  <activeNode nodeId="node-0x02E7D440"/>
+  <item nodeId="node-0x02E7D440">
+    <command xml:space="preserve">- start -</command>
+    <result xml:space="preserve">Second Chance, by Taggart Ashby&#x000A;&#x000A;Chapter 1: Where am I?&#x000A;&#x000A;You wake up with a splitting headache, so bad you swear you've been hit with a bat.&#x000A;&#x000A;&#x000A;Foyer&#x000A;Slowly the world comes into focus and you find yourself in a house. As you stand up and brush yourself off, small dust clouds form. To the west is the front door, ornate and grand, but splintered and buckling after what appears to be decades of neglect. To the east is the foyer door leading further into the house. On the wall in front of you hangs a picture. Behind you there is a bookcase filled with dusty books. To get any more details, you'd have to take a closer look. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="80">NO</temporary>
+    <children>
+      <child nodeId="node-0x02E7DB00"/>
+      <child nodeId="node-0x02E7DB70"/>
+      <child nodeId="node-0x02E72998"/>
+      <child nodeId="node-0x02E9F878"/>
+      <child nodeId="node-0x02E9F8E8"/>
+      <child nodeId="node-0x02EA0530"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E7DB00">
+    <command xml:space="preserve">read</command>
+    <result xml:space="preserve">That's not a verb I recognize.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="17">YES</temporary>
+  </item>
+  <item nodeId="node-0x02E7DB70">
+    <command xml:space="preserve">touch</command>
+    <result xml:space="preserve">What do you want to touch?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="21">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E727A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E727A0">
+    <command xml:space="preserve">touch books</command>
+    <result xml:space="preserve">You feel nothing unexpected.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="21">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E728A8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E728A8">
+    <command xml:space="preserve">take books</command>
+    <result xml:space="preserve">You're afraid if you even touch them they will fall apart.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="20">YES</temporary>
+  </item>
+  <item nodeId="node-0x02E72998">
+    <command xml:space="preserve">x dinosaur book</command>
+    <result xml:space="preserve">You see nothing special about the dinosaur book.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="17">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E72A08"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E72A08">
+    <command xml:space="preserve">x herp book</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="17">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E72A78"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E72A78">
+    <command xml:space="preserve">read</command>
+    <result xml:space="preserve">What do you want to read?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="17">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E9F5B8"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E9F5B8">
+    <command xml:space="preserve">read dinosaur book</command>
+    <result xml:space="preserve">You see nothing special about the dinosaur book.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="17">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E9F808"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E9F808">
+    <command xml:space="preserve">read picture</command>
+    <result xml:space="preserve">The frame is barely holding together. The picture is unrecognizeable from the decay and water damage.  &#x000A;&#x000A;You hear a faint whizz coming from all around, what you imagine magic would sound like, if such a thing were real.  &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="16">YES</temporary>
+  </item>
+  <item nodeId="node-0x02E9F878">
+    <command xml:space="preserve">take dinosaur book</command>
+    <result xml:space="preserve">That's hardly portable.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="41">YES</temporary>
+  </item>
+  <item nodeId="node-0x02E9F8E8">
+    <command xml:space="preserve">x boks</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="55">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E9FB50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E9FB50">
+    <command xml:space="preserve">x books</command>
+    <result xml:space="preserve">The books are dirty and falling apart. Pages are ripped and the spines of most of them are barely staying together.   &#x000A;&#x000A;You hear a faint whizz coming from all around, what you imagine magic would sound like, if such a thing were real.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="55">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0278"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0278">
+    <command xml:space="preserve">x picture</command>
+    <result xml:space="preserve">The frame is barely holding together. The picture is unrecognizeable from the decay and water damage.  &#x000A;&#x000A;Something strange is happening to the house&#x2026;&#x000A;&#x000A;Chapter 2: Old Memories&#x000A;&#x000A; Suddenly the house becomes more lively. The dust and rot have vanished and everything is in better condition. The foyer door lock clicks and you can see that it's now unlocked.&#x000A;&#x000A;Foyer&#x000A;You can't believe your eyes! The front door slowly fills in its cracks with new wood and paint, rust dissolving from the hinges. The picture comes back into focus. The spines on the books stiffen and strengthen. To the east is the foyer door. You can make out the picture now, a family portrait. The bookcase shines a little, the remnants of a lacquer applied a while ago, and book titles can be seen. &#x000A;&#x000A;This is your childhood home, a little more beat up than you remember though. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="55">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA03E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA03E0">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">(first opening the foyer door)&#x000A;The hinges of the door squeak as you open it and move through.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="55">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0450"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0450">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Play Room&#x000A;You are in the play room. You used to spend all day in here with your pile of toys. There a pile of pile of toys on the floor, discarded, old, and heavy used. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="55">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA04C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA04C0">
+    <command xml:space="preserve">x toys</command>
+    <result xml:space="preserve">You see nothing special about the pile of toys.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="54">YES</temporary>
+  </item>
+  <item nodeId="node-0x02EA0530">
+    <command xml:space="preserve">x picture</command>
+    <result xml:space="preserve">The frame is barely holding together. The picture is unrecognizeable from the decay and water damage.  &#x000A;&#x000A;You hear a faint whizz coming from all around, what you imagine magic would sound like, if such a thing were real.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="40">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA05A0"/>
+      <child nodeId="node-0x02EA0610"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA05A0">
+    <command xml:space="preserve">x frame</command>
+    <result xml:space="preserve">The frame is barely holding together. The picture is unrecognizeable from the decay and water damage.  &#x000A;&#x000A;You hear a faint whizz coming from all around, what you imagine magic would sound like, if such a thing were real.  &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="9">YES</temporary>
+  </item>
+  <item nodeId="node-0x02EA0610">
+    <command xml:space="preserve">x books</command>
+    <result xml:space="preserve">The books are dirty and falling apart. Pages are ripped and the spines of most of them are barely staying together.  &#x000A;&#x000A;Something strange is happening to the house&#x000A;&#x000A;Chapter 2: Old Memories&#x000A;&#x000A;Suddenly the house becomes more lively. The dust and rot have vanished and everything is in better condition. The foyer door lock clicks and you can see that it's now unlocked.&#x000A;&#x000A;Foyer&#x000A;You can't believe your eyes! The front door slowly fills in its cracks with new wood and paint, rust dissolving from the hinges. The picture comes back into focus. The spines on the books stiffen and strengthen. To the east is the foyer door. You can make out the picture now, a family portrait. The bookcase shines a little, the remnants of a lacquer applied a while ago, and book titles can be seen. &#x000A;&#x000A;This is your childhood home, a little more beat up than you remember though. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="40">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0680"/>
+      <child nodeId="node-0x02EA0840"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0680">
+    <command xml:space="preserve">take books</command>
+    <result xml:space="preserve">That's hardly portable.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="40">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA06F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA06F0">
+    <command xml:space="preserve">take book</command>
+    <result xml:space="preserve">That's fixed in place.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="40">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0760"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0760">
+    <command xml:space="preserve">take book</command>
+    <result xml:space="preserve">That's fixed in place.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="40">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA07D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA07D0">
+    <command xml:space="preserve">x bookcase</command>
+    <result xml:space="preserve">Just your standard bookcase really, full of books.&#x000A;&#x000A;In the bookcase is a dinosaur book.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="39">YES</temporary>
+  </item>
+  <item nodeId="node-0x02EA0840">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">(first opening the foyer door)&#x000A;Floor boards creak and moan.&#x000A;&#x000A;Play Room&#x000A;You are in the play room. You used to spend all day in here with your toys. There is a pile of toys on the floor, discarded, old, and heavy used. To the north is a door with "Bath" written on it in fading gold paint. To the south is door with "Nursery" written on it in the same fading paint. To the east is a door with nothing written on it. Back to the west is the Foyer.  &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA08B0"/>
+      <child nodeId="node-0x02E8C3C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA08B0">
+    <command xml:space="preserve">x toys</command>
+    <result xml:space="preserve">The toys are broken or nearly broken from intense use, no one ever said you were gentle with your toys. &#x000A;&#x000A;It sounds as though something will happen like last time if you keep at it...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0920"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0920">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">(first opening the bathroom door)&#x000A;Floor boards creak and moan.&#x000A;&#x000A;Bathroom&#x000A;On your right is a bathtub, off-white with rings in some corners from shampoo bottles that once sat there. On your left is the bathroom counter, on which are some toothbrushes. Attached to the left wall is a large mirror. &#x000A;&#x000A;You can see a rubber ducky here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0990"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0990">
+    <command xml:space="preserve">take rubber ducky</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0A00"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0A00">
+    <command xml:space="preserve">x ducky</command>
+    <result xml:space="preserve">There's a rubber duck! Now you remember; your parents bought it and you would chew on it while they bathed you. No bite marks on it now though. It always brought you luck and you think of taking it with you.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0A70"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0A70">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;The only way to go is south.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0AE0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0AE0">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The hinges of the door squeak as you open it and move through.&#x000A;&#x000A;Play Room&#x000A;You are in the play room. You used to spend all day in here with your toys. There is a pile of toys on the floor, discarded, old, and heavy used. To the north is a door with "Bath" written on it in fading gold paint. To the south is door with "Nursery" written on it in the same fading paint. To the east is a door with nothing written on it. Back to the west is the Foyer. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0B50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0B50">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Floor boards creak and moan.&#x000A;&#x000A;Bathroom&#x000A;On your right is a bathtub, off-white with rings in some corners from shampoo bottles that once sat there. On your left is the bathroom counter, on which are some toothbrushes. Attached to the left wall is a large mirror. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0BC0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0BC0">
+    <command xml:space="preserve">x mirror</command>
+    <result xml:space="preserve">The mirror is dotted with toothpaste mishaps and steam residue. &#x000A;&#x000A;There's that whizzing sound again...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0C30"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0C30">
+    <command xml:space="preserve">x toothbrushes</command>
+    <result xml:space="preserve">The toothbrushes show signs of wear, the bristles not all pointing the same way. Brushing your teeth was always something you tolerated. Not great, but way better than the baths. &#x000A;&#x000A;It sounds as though something will happen like last time if you keep at it...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0CA0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0CA0">
+    <command xml:space="preserve">toothbrushes</command>
+    <result xml:space="preserve">That's not a verb I recognize.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0D10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0D10">
+    <command xml:space="preserve">container</command>
+    <result xml:space="preserve">That's not a verb I recognize.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0D80"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0D80">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Bathroom&#x000A;On your right is a bathtub, off-white with rings in some corners from shampoo bottles that once sat there. On your left is the bathroom counter, on which are some toothbrushes. Attached to the left wall is a large mirror. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0DF0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0DF0">
+    <command xml:space="preserve">x mirror</command>
+    <result xml:space="preserve">The mirror is dotted with toothpaste mishaps and steam residue. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0E60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0E60">
+    <command xml:space="preserve">x bathtub</command>
+    <result xml:space="preserve">You never cared for baths, still don't know a single child who did. Now you'd shower all day if you could, funny how things change. &#x000A;&#x000A;You hear the magic sound once again...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0ED0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0ED0">
+    <command xml:space="preserve">x counter</command>
+    <result xml:space="preserve">The grout in between the tiles is dark brown. There's a sink and a toothbrush container. &#x000A;&#x000A;It sounds as though something will happen like last time if you keep at it...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0F40"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0F40">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Dust clouds surround your feet as you walk.&#x000A;&#x000A;Play Room&#x000A;You are in the play room. You used to spend all day in here with your toys. There is a pile of toys on the floor, discarded, old, and heavy used. To the north is a door with "Bath" written on it in fading gold paint. To the south is door with "Nursery" written on it in the same fading paint. To the east is a door with nothing written on it. Back to the west is the Foyer. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA0FB0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA0FB0">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening the nursery door)&#x000A;Floor boards creak and moan.&#x000A;&#x000A;Nursery&#x000A;Covering the walls is a yellow patterned wallpaper, faded and peeling. On the opposite wall is the crib, blankets hang off the edge and through the open slots in the front you can see that the bed is haphazardly made. There's a brown cushy chair beside the crib where your parents used to sit when they read to you. The fuzz is worn down on the seat and in the middle of the back. To your immediate right is a dresser, chunks are missing from one of the legs where the door would always hit it. &#x000A;&#x000A;Above the crib hangs a mobile of the solar system. Saturn is missing a ring. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA1020"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA1020">
+    <command xml:space="preserve">x mobile</command>
+    <result xml:space="preserve">The complete solar system, even Pluto!&#x000A;&#x000A;There's that whizzing sound again...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA1090"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA1090">
+    <command xml:space="preserve">x saturn</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA1100"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA1100">
+    <command xml:space="preserve">x ring</command>
+    <result xml:space="preserve">Saturn's ring is no where to be found. &#x000A;&#x000A;It sounds as though something will happen like last time if you keep at it...&#x000A;&#x000A;Chapter 3: New Beginnings&#x000A;&#x000A;The house becomes vibrant. Washed out colors return to their former glory, dirt and dust cease to exist, all signs of wear disappear.&#x000A;&#x000A;Nursery&#x000A;The walls are practically shining from the yellow. How did your parents stand being in this room? How did you stand being in this room? The crib is pristine, the little bed ready to be slept on, the blankets tucked in just right. The brown cushy chair is furry and welcoming. Your old dresser is clean and in tact.&#x000A;&#x000A;The whole solar system is there, and hey!, there's Saturn's ring. &#x000A;&#x000A;It's like you never grew up... if only.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA1170"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA1170">
+    <command xml:space="preserve">x chair</command>
+    <result xml:space="preserve">The chair is brand new, no marks, no scuffs. You miss those days when life was simple and you listened to your parents tell stories.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA11E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA11E0">
+    <command xml:space="preserve">x wallpaper</command>
+    <result xml:space="preserve">The wallpaper gleams, from certain angles the wallpaper appears completely white from the reflection of the overhead light.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA1250"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA1250">
+    <command xml:space="preserve">x crib</command>
+    <result xml:space="preserve">The pillow is fluffed and the blankets are tucked in and placed with precision. Nothing is out of place, it doesn't even seem used.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA12C0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA12C0">
+    <command xml:space="preserve">x blankets</command>
+    <result xml:space="preserve">Tucked into the crib perfectly. Your parents just had to pull them back a little and slide you in, cozy and warm.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA1330"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA1330">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Play Room&#x000A;All of your favorite toys lie on the floor, they look like they've just been unpackaged. You can't help but feel excited all over again. To the north is a door with "Bath" written on it in shining gold paint. To the south is door with "Nursery" written on it in the same glinting paint. To the east is a door with nothing written on it. Back to the west is the Foyer.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8BEF0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8BEF0">
+    <command xml:space="preserve">i</command>
+    <result xml:space="preserve">You are carrying:&#x000A;  a rubber ducky&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8BF60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8BF60">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Foyer&#x000A;The novelty still hasn't worn off. The front door is beautiful, hand-crafted designs etched into the rich mahogany. The picture is crystal clear, as if it were printed yesterday. The books are clean and look like they've never been opened. To the east is the door to the Play Room.&#x000A;&#x000A;You can see a dinosaur book here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8BFD0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8BFD0">
+    <command xml:space="preserve">x book</command>
+    <result xml:space="preserve">You haven't seen that dinosaur book in a long time. You loved that book as a kid! Heck, you knew the names of every one of those dinosaurs. You think you may just take it for old times sake.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C040"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C040">
+    <command xml:space="preserve">take book</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C0B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C0B0">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Foyer&#x000A;The front door is beautiful, hand-crafted designs etched into the rich mahogany. The picture is crystal clear, as if it were printed yesterday. The books are clean and look like they've never been opened. To the east is the door to the Play Room.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C120"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C120">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Play Room&#x000A;All of your favorite toys lie on the floor, they look like they've just been unpackaged. You can't help but feel excited all over again. To the north is a door with "Bath" written on it in shining gold paint. To the south is door with "Nursery" written on it in the same glinting paint. To the east is a door with nothing written on it. Back to the west is the Foyer.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C190"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C190">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Bathroom&#x000A;The bathtub enamel is a pure white, radiant and clean. The toothbrushes sit on the counter, their bristles stiff and unbent. The mirror is very clean.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C200"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C200">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Play Room&#x000A;All of your favorite toys lie on the floor, they look like they've just been unpackaged. You can't help but feel excited all over again. To the north is a door with "Bath" written on it in shining gold paint. To the south is door with "Nursery" written on it in the same glinting paint. To the east is a door with nothing written on it. Back to the west is the Foyer.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C270"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C270">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Nursery&#x000A;The walls are practically shining from the yellow. How did your parents stand being in this room? How did you stand being in this room? The crib is pristine, the little bed ready to be slept on, the blankets tucked in just right. The brown cushy chair is furry and welcoming. Your old dresser is clean and in tact.&#x000A;&#x000A;The whole solar system is there, and hey!, there's Saturn's ring. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C2E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C2E0">
+    <command xml:space="preserve">take mobile</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;The Play Room is beckoning you, maybe you should head north.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C350"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C350">
+    <command xml:space="preserve">north</command>
+    <result xml:space="preserve">Play Room&#x000A;All of your favorite toys lie on the floor, they look like they've just been unpackaged. You can't help but feel excited all over again. To the north is a door with "Bath" written on it in shining gold paint. To the south is door with "Nursery" written on it in the same glinting paint. To the east is a door with nothing written on it. Back to the west is the Foyer.&#x000A;&#x000A;Final Chapter: The End&#x000A;&#x000A;The house grows all around you as you shrink down to a baby. Your mind is racing, this can't be real! You scream for help. Your parents open the door to the east and come in. You yell for help, but none of your words are coherent. Your parents scoop you up and rock you back and forth. You try to tell them what's going on, but they can't understand you. Suddenly all the mistakes you've made in your life cascade through your head like a damn let loose: relationships you should have ended sooner, relationships you shouldn't haven't ended, those decisions you made, the terrible things you did to people you cared for, beating yourself up for things you had no control over, ..... You calm down and your parents set you back down to play with your toys and mobile, dinosaur book and rubber ducky.&#x000A;&#x000A;&#x000A;&#x000A;    *** You breath a sigh of relief. You're getting a second chance... ***&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02E8C3C0">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">(first opening the bathroom door)&#x000A;The hinges of the door squeak as you open it and move through.&#x000A;&#x000A;Bathroom&#x000A;On your right is a bathtub, off-white with rings in some corners from shampoo bottles that once sat there. On your left is the bathroom counter, on which are some toothbrushes. Attached to the left wall is a large mirror. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C430"/>
+      <child nodeId="node-0x02E8CDD0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C430">
+    <command xml:space="preserve">take ducky</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C4A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C4A0">
+    <command xml:space="preserve">x crib</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C510"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C510">
+    <command xml:space="preserve">x mirror</command>
+    <result xml:space="preserve">The mirror is dotted with toothpaste mishaps and steam residue. &#x000A;&#x000A;You hear the magic sound once again...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C580"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C580">
+    <command xml:space="preserve">x counter</command>
+    <result xml:space="preserve">The grout in between the tiles is dark brown. There's a sink and a toothbrush container. &#x000A;&#x000A;There's that whizzing sound again...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C5F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C5F0">
+    <command xml:space="preserve">x toothbrushes</command>
+    <result xml:space="preserve">The toothbrushes show signs of wear, the bristles not all pointing the same way. Brushing your teeth was always something you tolerated. Not great, but way better than the baths. &#x000A;&#x000A;You hear the magic sound once again...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C660"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C660">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The hinges of the door squeak as you open it and move through.&#x000A;&#x000A;Play Room&#x000A;You are in the play room. You used to spend all day in here with your toys. There is a pile of toys on the floor, discarded, old, and heavy used. To the north is a door with "Bath" written on it in fading gold paint. To the south is door with "Nursery" written on it in the same fading paint. To the east is a door with nothing written on it. Back to the west is the Foyer. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C6D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C6D0">
+    <command xml:space="preserve">x toys</command>
+    <result xml:space="preserve">The toys are broken or nearly broken from intense use, no one ever said you were gentle with your toys. &#x000A;&#x000A;There's that whizzing sound again...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C740"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C740">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening the nursery door)&#x000A;Dust clouds surround your feet as you walk.&#x000A;&#x000A;Nursery&#x000A;Covering the walls is a yellow patterned wallpaper, faded and peeling. On the opposite wall is the crib, blankets hang off the edge and through the open slots in the front you can see that the bed is haphazardly made. There's a brown cushy chair beside the crib where your parents used to sit when they read to you. The fuzz is worn down on the seat and in the middle of the back. To your immediate right is a dresser, chunks are missing from one of the legs where the door would always hit it. &#x000A;&#x000A;Above the crib hangs a mobile of the solar system. Saturn is missing a ring. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C7B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C7B0">
+    <command xml:space="preserve">x crib</command>
+    <result xml:space="preserve">This is where you slept for a long while. You don't rememeber it being so agitated, but you were just a little kid. You can now understand the futility of making the bed for a child, your parents must have given up at some point. &#x000A;&#x000A;You hear the magic sound once again...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C820"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C820">
+    <command xml:space="preserve">x chair</command>
+    <result xml:space="preserve">Your parents used to read to you in this chair, and it shows. You can tell exactly where they sat just by the worn in pattern. &#x000A;&#x000A;It sounds as though something will happen like last time if you keep at it...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C890"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C890">
+    <command xml:space="preserve">x dresser</command>
+    <result xml:space="preserve">The dresser has seen better days, but it still functions. You open and close the drawers, nothing of interest in there. &#x000A;&#x000A;You hear the magic sound once again...&#x000A;&#x000A;Chapter 3: New Beginnings&#x000A;&#x000A;The house becomes vibrant. Washed out colors return to their former glory, dirt and dust cease to exist, all signs of wear disappear.&#x000A;&#x000A;Nursery&#x000A;The walls are practically shining from the yellow. How did your parents stand being in this room? How did you stand being in this room? The crib is pristine, the little bed ready to be slept on, the blankets tucked in just right. The brown cushy chair is furry and welcoming. Your old dresser is clean and in tact.&#x000A;&#x000A;The whole solar system is there, and hey!, there's Saturn's ring. &#x000A;&#x000A;It's like you never grew up... if only.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C900"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C900">
+    <command xml:space="preserve">take mobile</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C970"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C970">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">You can't go that way.&#x000A;&#x000A;The only way to go is north.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8C9E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8C9E0">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Play Room&#x000A;All of your favorite toys lie on the floor, they look like they've just been unpackaged. You can't help but feel excited all over again. To the north is a door with "Bath" written on it in shining gold paint. To the south is door with "Nursery" written on it in the same glinting paint. To the east is a door with nothing written on it. Back to the west is the Foyer.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8CA50"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8CA50">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">(first opening the mystery door)&#x000A;It seems to be locked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8CAC0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8CAC0">
+    <command xml:space="preserve">w</command>
+    <result xml:space="preserve">Foyer&#x000A;The novelty still hasn't worn off. The front door is beautiful, hand-crafted designs etched into the rich mahogany. The picture is crystal clear, as if it were printed yesterday. The books are clean and look like they've never been opened. To the east is the door to the Play Room.&#x000A;&#x000A;You can see a dinosaur book here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8CB30"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8CB30">
+    <command xml:space="preserve">take book</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;The Play Room is beckoning you, maybe you should head east.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8CBA0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8CBA0">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">Play Room&#x000A;All of your favorite toys lie on the floor, they look like they've just been unpackaged. You can't help but feel excited all over again. To the north is a door with "Bath" written on it in shining gold paint. To the south is door with "Nursery" written on it in the same glinting paint. To the east is a door with nothing written on it. Back to the west is the Foyer.&#x000A;&#x000A;The mysterious door seems to be unlocked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8CC10"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8CC10">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">(first opening the mystery door)&#x000A;&#x000A;Parent's Room&#x000A;Final Chapter: The End&#x000A;&#x000A;The house grows all around you as you shrink down to a baby. Your mind is racing, this can't be real! You scream for help. Your parents just look at you and smile. You yell for help, but none of your words are coherent. Your parents scoop you up and rock you back and forth. You try to tell them what's going on, but they can't understand you. Suddenly all the mistakes you've made in your life cascade through your head like a dam let loose: relationships you should have ended sooner, relationships you shouldn't haven't ended, those decisions you made, the terrible things you did to people you cared for, beating yourself up for things you had no control over, ..... so many memories. You calm down and your parents set you back down in the Play Room to play with your toys and dinosaur book, mobile and rubber ducky.&#x000A;&#x000A;&#x000A;&#x000A;    *** You breath a sigh of relief. You're getting a second chance... ***&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8CC80"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8CC80">
+    <command xml:space="preserve">undo</command>
+    <result xml:space="preserve">Play Room&#x000A;[Previous turn undone.]&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8CCF0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8CCF0">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Play Room&#x000A;All of your favorite toys lie on the floor, they look like they've just been unpackaged. You can't help but feel excited all over again. To the north is a door with "Bath" written on it in shining gold paint. To the south is door with "Nursery" written on it in the same glinting paint. To the east is a door with nothing written on it. Back to the west is the Foyer.&#x000A;&#x000A;The mysterious door seems to be unlocked.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8CD60"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8CD60">
+    <command xml:space="preserve">e</command>
+    <result xml:space="preserve">(first opening the mystery door)&#x000A;&#x000A;Parent's Room&#x000A;Final Chapter: The End&#x000A;&#x000A;The house grows all around you as you shrink down to a baby. Your mind is racing, this can't be real! You scream for help. Your parents just look at you and smile. You yell for help, but none of your words are coherent. Your parents scoop you up and rock you back and forth. You try to tell them what's going on, but they can't understand you. Suddenly all the mistakes you've made in your life cascade through your head like a dam let loose: relationships you should have ended sooner, relationships you shouldn't haven't ended, those decisions you made, the terrible things you did to people you cared for, beating yourself up for things you had no control over, ..... so many memories. You calm down and your parents set you back down in the Play Room to play with your toys and dinosaur book, mobile and rubber ducky.&#x000A;&#x000A;&#x000A;&#x000A;    *** You breath a sigh of relief. You're getting a second chance... ***&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+  <item nodeId="node-0x02E8CDD0">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Floor boards creak and moan.&#x000A;&#x000A;Play Room&#x000A;You are in the play room. You used to spend all day in here with your toys. There is a pile of toys on the floor, discarded, old, and heavy used. To the north is a door with "Bath" written on it in fading gold paint. To the south is door with "Nursery" written on it in the same fading paint. To the east is a door with nothing written on it. Back to the west is the Foyer.  &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02E8CE40"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02E8CE40">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">(first opening the nursery door)&#x000A;The hinges of the door squeak as you open it and move through.&#x000A;&#x000A;Nursery&#x000A;Covering the walls is a yellow patterned wallpaper, faded and peeling. On the opposite wall is the crib, blankets hang off the edge and through the open slots in the front you can see that the bed is haphazardly made. There's a brown cushy chair beside the crib where your parents used to sit when they read to you. The fuzz is worn down on the seat and in the middle of the back. To your immediate right is a dresser, chunks are missing from one of the legs where the door would always hit it. &#x000A;&#x000A;Above the crib hangs a mobile of the solar system. Saturn is missing a ring. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA4130"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA4130">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Floor boards creak and moan.&#x000A;&#x000A;Play Room&#x000A;You are in the play room. You used to spend all day in here with your toys. There is a pile of toys on the floor, discarded, old, and heavy used. To the north is a door with "Bath" written on it in fading gold paint. To the south is door with "Nursery" written on it in the same fading paint. To the east is a door with nothing written on it. Back to the west is the Foyer.  &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA41A0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA41A0">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Dust clouds surround your feet as you walk.&#x000A;&#x000A;Bathroom&#x000A;On your right is a bathtub, off-white with rings in some corners from shampoo bottles that once sat there. On your left is the bathroom counter, on which are some toothbrushes. Attached to the left wall is a large mirror. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA4210"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA4210">
+    <command xml:space="preserve">x tub</command>
+    <result xml:space="preserve">You never cared for baths, still don't know a single child who did. Now you'd shower all day if you could, funny how things change. &#x000A;&#x000A;There's that whizzing sound again... Maybe the house will change again soon!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA4280"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA4280">
+    <command xml:space="preserve">x bottles</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA42F0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA42F0">
+    <command xml:space="preserve">x rings</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA4360"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA4360">
+    <command xml:space="preserve">x counter</command>
+    <result xml:space="preserve">The grout in between the tiles is dark brown. There's a sink and a toothbrush container. &#x000A;&#x000A;It sounds as though something will happen like last time if you keep at it...&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA43D0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA43D0">
+    <command xml:space="preserve">x toothbrushes</command>
+    <result xml:space="preserve">The toothbrushes show signs of wear, the bristles not all pointing the same way. Brushing your teeth was always something you tolerated. Not great, but way better than the baths. &#x000A;&#x000A;There's that whizzing sound again... Maybe the house will change again soon!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA4440"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA4440">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">The hinges of the door squeak as you open it and move through.&#x000A;&#x000A;Play Room&#x000A;You are in the play room. You used to spend all day in here with your toys. There is a pile of toys on the floor, discarded, old, and heavy used. To the north is a door with "Bath" written on it in fading gold paint. To the south is door with "Nursery" written on it in the same fading paint. To the east is a door with nothing written on it. Back to the west is the Foyer.  &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA44B0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA44B0">
+    <command xml:space="preserve">x toys</command>
+    <result xml:space="preserve">The toys are broken or nearly broken from intense use, no one ever said you were gentle with your toys. &#x000A;&#x000A;You hear the magic sound once again... You're excited for what may be coming soon.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA4520"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA4520">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Floor boards creak and moan.&#x000A;&#x000A;Nursery&#x000A;Covering the walls is a yellow patterned wallpaper, faded and peeling. On the opposite wall is the crib, blankets hang off the edge and through the open slots in the front you can see that the bed is haphazardly made. There's a brown cushy chair beside the crib where your parents used to sit when they read to you. The fuzz is worn down on the seat and in the middle of the back. To your immediate right is a dresser, chunks are missing from one of the legs where the door would always hit it. &#x000A;&#x000A;Above the crib hangs a mobile of the solar system. Saturn is missing a ring. &#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>YES</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA4590"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA4590">
+    <command xml:space="preserve">x wallpaper</command>
+    <result xml:space="preserve">The thin twisting white lines form that familiar pattern that stretches up to the ceiling. Bits of drywall are visible through the wallpaper where it's peeling or torn. &#x000A;&#x000A;There's that whizzing sound again... Maybe the house will change again soon!&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA4600"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA4600">
+    <command xml:space="preserve">x crib</command>
+    <result xml:space="preserve">This is where you slept for a long while. You don't rememeber it being so agitated, but you were just a little kid. You can now understand the futility of making the bed for a child, your parents must have given up at some point. &#x000A;&#x000A;It sounds as though something will happen like last time if you keep at it...&#x000A;&#x000A;Chapter 3: New Beginnings&#x000A;&#x000A;The house becomes vibrant. Washed out colors return to their former glory, dirt and dust cease to exist, all signs of wear disappear. You'd like to look around now that everything's brand new and maybe pick up a few things for old time's sake.&#x000A;&#x000A;Nursery&#x000A;The walls are practically shining from the yellow. How did your parents stand being in this room? How did you stand being in this room? The crib is pristine, the little bed ready to be slept on, the blankets tucked in just right. The brown cushy chair is furry and welcoming. Your old dresser is clean and in tact.&#x000A;&#x000A;The whole solar system is on the mobile, and hey!, there's Saturn's ring. &#x000A;&#x000A;It's like you never grew up... if only.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA4670"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA4670">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Nursery&#x000A;The walls are practically shining from the yellow. How did your parents stand being in this room? How did you stand being in this room? The crib is pristine, the little bed ready to be slept on, the blankets tucked in just right. The brown cushy chair is furry and welcoming. Your old dresser is clean and in tact.&#x000A;&#x000A;The whole solar system is on the mobile, and hey!, there's Saturn's ring. &#x000A;&#x000A;You can also see your favorite blanket here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA46E0"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA46E0">
+    <command xml:space="preserve">x blanket</command>
+    <result xml:space="preserve">Your childhood safety blanket. You slept with it every night and often brought it with you all over the house. Even now it makes you feel safe and you could use that security.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+    <children>
+      <child nodeId="node-0x02EA4750"/>
+    </children>
+  </item>
+  <item nodeId="node-0x02EA4750">
+    <command xml:space="preserve">take blanket</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <played>YES</played>
+    <changed>NO</changed>
+    <temporary score="0">YES</temporary>
+  </item>
+</Skein>

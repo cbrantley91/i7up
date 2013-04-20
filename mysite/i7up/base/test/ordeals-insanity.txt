@@ -1,0 +1,632 @@
+"ordeals (in)sanity" by Foaad
+
+[General Game mechanics stuff]
+use no scoring. use full-length room descriptions.
+
+[items]
+The silver briefcase is a closed, openable, lockable, locked, portable
+container. The small brass key unlocks the briefcase. The carrying
+capacity of the briefcase is 10. The description of the briefcase is
+"Your trusty old briefcase where you keep all your important
+documents. It does the job loyally. [if locked]Now if you could only
+remember where you left the key THIS time....".
+
+The leather wallet is an openable, closed, portable container. "The
+old wallet contains some money and your ID card." The leather wallet
+is not transparent.
+The ID card is a thing in the wallet. The description of the ID card
+is "Your driver's license. It says you live at '1410 Sea Canyon, Van
+Nuys, CA'".
+The Vehicle Registration card is a thing in the wallet. The
+description of the Vehicle Registration card is "You 1981 Honda Civic
+is due for a smog check soon.".
+The appointment card is a thing in the wallet. The description of the
+appointment card is "It says you have an appointment today with a
+psychiatrist at the Kaiser building at Van Nuys blvd and Ventura.".
+
+The small desk is a supporter. The small desk is fixed in place. The
+description of the small desk is "The small desk is the same desk you
+had in your dorm room all those years ago. Now it's a place for junk
+and paperwork. Your books are all piled up in one corner of the
+desk.".
+
+The rusty 1950's style refrigerator is an openable, closed container.
+The refrigerator is not transparent. The refrigerator is fixed in
+place.
+
+A chair is a kind of thing and a supporter. A chair is enterable.
+Definition: A chair is occupied if someone is on it. The plural of
+chair is chairs.
+
+
+[The appartment]
+The appartment is a region.
+The bedroom is a room in the appartment.
+
+The hallway is a room. "The hallway is dimly lit. The walls are dirty.
+The floors need washing."
+The house door is north of the hallway and south of the living room.
+"A wooden house door. Your name is written on a tag close to the
+handle." The house door is a door. The house door is lockable and
+locked. The set of keys unlocks the house door.
+The poster is east of the bedroom and west of the Chamber. "There's a
+giant poster of Gnarls Barkley in concert gracing the east wall of the
+bedroom." The poster is a locked, closed door.
+
+Before opening the poster:
+       if game phase is greater than 3, now the poster is unlocked.
+
+Understand "house" and "appartment" as the living room.
+The living room is a room. "It is a small average living room, in a
+small average appartment complex rented at a distinctly above-average
+price."
+The small kitchen is west of the living room. "It is a messy kitchen
+with unwashed dishes piled up and garbage overflowing the container.
+The refrigerator is characteristically empty."
+The counter is a supporter. The counter is fixed in place. The counter
+is in the small kitchen.
+Unpaid bills is a thing on the counter. "Some unpaid utility bills
+piling up...".
+A half-eaten apple is edible.
+The refrigerator is in the kitchen. The half-eaten apple is in the refrigerator.
+
+The wooden door is north of the bedroom and south of the bathroom. The
+wooden door is a door.
+The bathroom is a room. "Smallish bathroom with broken tiles. The
+older sink is craked. A toothbrush, shaving cream, used raizor and a
+few other personal items are lying about."
+The small brass key is in the refrigerator. "The small, partially
+rusted key seems useful for a small desk drawer or a suit case."
+
+The bedroom is east of the living room. "Not much bigger than a cheap
+hotel room, but not nearly as pleasant smelling."
+The bed is in the bedroom. The rug on the floor is in the bedroom.
+The bed and the rug on the floor are fixed in place.
+The small desk is in the bedroom. The wallet is on the desk. The
+briefcase is on the desk. The set of keys is on the desk.
+One chair is in the bedroom.
+
+The staircase is below the hallway.
+The staircase is west of 1410 Sea Canyon.
+The hallway, living room, the small kitchen, the bathroom, the chamber
+and the bedroom are in the appartment.
+
+
+[streets]
+A street is a kind of room. The plural of street is streets.
+
+Corner of Ventura/Winetka is a street.
+Intersection of Ventura/Desoto is a street.
+Van Nuys blvd/Ventura is a street. "This is a busy cross street. You
+can see the Kaiser lobby to the east.".
+Victory/Desoto is a street.
+23650 Victory is a street.
+Victory/Winetka is a street.
+Corner of Victory at Van Nuys is a street.
+Sea Canyon/Van Nuys is a street.
+1410 Sea Canyon is a street.
+parking is a street. "This is a nice parking lot. You can see the elevator bank that you can take up to the complex here".
+
+The overpass is a street.
+405-freeway is a street.
+
+Victory/Desoto is west of 23650 Victory and north of Intersection of Ventura/Desoto and east of overpass.
+overpass is east of 405-freeway.
+23650 Victory is east of Victory/Desoto and west of Victory/Winetka.
+Victory/Winetka is east of 23650 Victory and north of Corner of Ventura/Winetka and west of Corner of Victory at Van Nuys.
+Ventura/Winetka is south of Victory/Winetka and east of Intersection of Ventura/Desoto and west of Van Nuys blvd/Ventura.
+Van Nuys blvd/Ventura is south of Corner of Victory at Van Nuys.
+Sea Canyon/Van Nuys is south of Van Nuys blvd/Ventura.
+1410 Sea Canyon is west of Sea Canyon/Van Nuys.
+parking is north of 23650 Victory.
+The freeway below is a room.
+The freeway below is north of overpass.
+
+Instead of going north from the overpass for the first time:
+	say "be careful, one more step north and you will plunge down from the
+overpass and fall onto the 405 freeway below. It will certainly cost
+you your life.".
+Instead of going north from the overpass for the second time:
+       say "You fall down causing a several accidents as cars crash into
+each other trying to avoid your heavily damaged body. If you didn't
+die from the initial fall, you certainly did in the ensuing
+explosions.";
+       end the game saying "[ending3]".
+
+[cars]
+A car is a kind of thing. The plural of car is cars.
+Instead of asking someone about something:
+       if the noun is a car, say "[one of]The windows are up, no one hears
+you[or]Person rolls up the window and drives on[or]They probably think
+you're homeless[or]Not responding[or]No one sees you the driver is on
+her cell phone[or]Driver pretends not to see you[at random]."
+
+The red sports car is a car in Van Nuys blvd/Ventura.
+The ordinary looking pickup truck is a car in Ventura/Winetka.
+The yellow Taxi is a car in Ventura/Winetka. The plural of yellow Taxi is Taxis.
+The limosine is a car in Victory/Desoto.
+The bus is a car. It is in 23650 Victory.
+The school bus is a car in Victory/Winetka.
+The Blue Toyota RAV4 is a car in the 405-freeway.
+The late model Honda Accord is a car in the 405-freeway.
+The gray Dodge Neon is a car in the 405-freeway.
+The Suzuki Motorcycle is a car in the 405-freeway.
+The Harley is a car in the 405-freeway.
+The Big rig truck is a car in the 405-freeway.
+The black Corvette is a car in the 405-freeway.
+The old Nissan is a car in the 405-freeway.
+
+Instead of entering a car, say "You can't get into other people's cars!".
+
+In Victory/Desoto are two cars.
+In the Corner of Ventura/Winetka are two Taxis and two cars.
+
+[Set up cars to come in an out of streets in a semi-random way simulating LA traffic]
+Every turn:
+	repeat with thisCar running through cars:
+		let thisRoad be the location of thisCar;
+		[if randomCar is in a street (called thisRoad),]
+		let nextRoad be a random street which is adjacent to thisRoad;
+		if thisCar is visible, say "[a thisCar] is [one of] turning
+at[or]going toward[or]heading to[or]driving to[or]pulling up
+to[or]accelerating to[at random] [nextRoad].";
+		move thisCar to nextRoad;
+		if thisCar is visible, say "[a thisCar] [one of] just pulled in
+from[or]is coming from the direction of[or]comes zipping past you
+driving from[or]is turning here[or]just turned this way[or]is coming
+this way from[or]is driving this way from[or]is pulling in from[or]is
+getting ready to park having turned in from[at random] [thisRoad]."
+
+
+[Gun and shooting]
+The revolver is a thing. The description of the revolver is "The
+stainless steel King Cobra revolver is a cheap and efficient weapon.
+The well machined chamber currently houses at least a couple .38
+special rounds.".
+
+Shooting it with is an action applying to two things.
+Check shooting something with something:
+       if the player is not carrying the revolver, say "You don't have a
+gun." instead;
+       [if the first noun is not a person, say "You don't need to shoot [the
+first noun] with a gun." instead;]
+       if the second noun is not the revolver, say "I don't know how to
+'shoot' with a [The second noun]." instead;
+       if the noun is the revolver, say "You must be crazy! Oh wait...";
+       if the noun is the player, end the game saying "[ending1]".
+
+Understand "gun" as revolver.
+Understand "shoot [revolver] at [something unrevolverlike]" as
+shooting it with (with nouns reversed).
+
+Definition: a thing is unrevolverlike if it is not the revolver.
+
+Understand "shoot [someone] with [revolver]" as shooting it with.
+Understand "shoot [something] with [something]" as shooting it with.
+
+Understand "shoot [something] at [someone]" as shooting it with (with
+nouns reversed). Understand "fire [revolver] with [something
+unrevolverlike]" as shooting it with (with nouns reversed). Understand
+"fire at [something unrevolverlike] with [revolver]" as shooting it
+with. Understand "fire at [someone] with [something]" as shooting it
+with.
+
+Carry out shooting someone with something:
+       let currentRoom be the location of the second noun;
+       say "Bang. [The noun] falls to the floor bleeding from the mid
+section. [list of people in currentRoom] watch the scene with a mix of
+shock and horror.";
+       remove the noun from play;
+       end the game saying "[ending2]".
+
+Instead of shooting something which is not a person with something:
+       say "Save it for the bad guys.".
+
+Instead of shooting Dr Y with something:
+       say "You raise the gun and shoot straight into Dr Y's heart. He falls
+on the ground with open eyes still staring at you. You feel a great
+calm engulfing you along with a sense of satisfaction and pleasure.";
+       end the game saying "[ending5]".
+
+The revolver is in the briefcase.
+
+[Insurance Building]
+Insurance Building is a region.
+
+The reception room is south of office A."This is the reception room
+for this insurance company. There are many people here, most look
+unhappy and exhausted."
+
+Reception room, corridor, elevators, office A, office B, office C,
+office D and office E are in the Insurance Building.
+Office B is west of the reception room.
+Office C is east of the reception room.
+corridor is south of the reception room.
+Office D is west of corridor.
+Office E is east of corridor.
+
+The elevators is south of the corridor and up from Kaiser Permenente lobby.
+The lobby is east of Van Nuys blvd/Ventura.
+
+The receptionist's table is in the reception room.
+The file drawer is an openable, closed, container in the reception
+room. The file drawer is fixed in place.
+After opening the file drawer for the first time:
+       now the game phase is 2;
+
+Your file folder is a thing. The description of Your file folder is
+"Your file folder. It contains notes about your case. One memo calls
+you a 'loose cannon' who is most likely 'making up psychological
+symptoms to get attention', it recommends Kaiser people to not take
+your seriously and definitly not authorize any medical
+expenses.[paragraph break] Another note is by a research assistent and
+it lists the names of the three doctors who have studied and indicated
+they could help your condition.[paragraph break] The first one, Dr.
+Starlove, is internal to Kaiser. He works at the Kaiser building
+Office E. The second Dr is Dr. Koch and he works at the WestView
+medical plaza 23650 Victory close to Victory and Winetka. The third
+Dr. is simply called 'Dr. Y' and no address is listed. Strange... you
+wonder if its some kind of Asian name.".
+
+In the reception room are seven chairs.
+
+[The Westview Medical Plaza]
+Westview is a region.
+WVM entrance, waiting room, Dr Kochs office, Dr Neubatens office, Dr
+Planks office and washroom are in Westview.
+
+The parking lot elevators is an open door. "Very modern looking set of
+elevators running from the parking lot up to the Westview offices."
+The parking lot elevators is up from parking and down from WVM entrance.
+The WVM entrance is south of waiting room. "Westview Medical Plaza
+entrance. You see people busily walking in an out of offices. A map
+shows you locations for [list of rooms in Westview].".
+The waiting room is south of Dr Planks office and west of Dr Kochs
+office and east of Dr Neubatens office.
+Dr Kochs office is west of the washroom.
+
+[Driving]
+The 81 Honda Civic is a vehicle. It is openable, lockable and locked. It is in 1410 Sea Canyon. The set of keys unlocks it.
+
+[Instead of closing the 81 Honda Civic when the player is in a vehicle, say "You close the car door.".]
+Instead of going up when the player is in a vehicle: say "What? You can't do that, this is a terresterial car!".
+Instead of going down when the player is in a vehicle: say "Go down where? You're in a car!".
+Instead of going to a street from a street when the player is not in a vehicle, say "That's too far, you need a car. Nobody walks in LA!".
+
+Driving is an action applying to one thing.
+
+
+[people]
+[- Major NPCs]
+A doctor is a kind of a person. The plural of doctor is doctors.
+
+Dr Koch is a doctor in Dr Kochs office.
+Dr Starlove is a doctor in Office E.
+Dr Y is a doctor in the chamber.
+
+Instead of asking Dr Starlove about something:
+	if the game phase is 1:
+		say "It looks like he's busy with a patient, You can't
+talk to him
+right now.";
+	if the game phase is 2, say "The doctor immediately gets up and says
+Aha, I have been thinking a lot about you.".
+
+
+The secretary is a person in the reception room. "A secretary is
+sitting behind her desk. She looks like she's in charge here.".
+Instead of asking the secretary about something:
+	say "You try to get the secretary's attention. [one of] She turns
+around and let's out a big sigh. 'I told you, there is nothing further
+we can do. You just have to wait until our analysis department is done
+with your case. And NO you can't have your file folder that is
+confidential material property of Kaiser Inc.' [paragraph
+break][or]'Nope! Sorry, I can't help you.'[or]'Allright, do I have to
+call security?'[or]She ignores you completely... You wonder if you
+should just steal the file yourself [stopping]".
+
+
+[- Animated Extras]
+An extra is a kind of a person. The plural of extra is extras.
+Instead of asking some extra about something, say "[one of]You waste a
+little time before realizing this person doesn't know
+anything...[or]This person doesn't know anything useful[or]You get no
+where with this person[or]Complete silence, it's like you're not
+there[or]This person is getting annoyed now[or]nothin... nada[at
+random]".
+
+The businessman is an extra in the elevators.
+The tall woman is an extra. She is in the reception room.
+The cute couple is an extra in the reception room.
+The fat guy is an extra in the reception room.
+The mother holding her kid is an extra in the reception room.
+The older gray haired woman is an extra in the reception room.
+The blind guy next to his guide dog is an extra in the reception room.
+The guy in a sports coat is an extra in the reception room.
+The tall guy is an extra in the reception room.
+
+The young nurse is an extra in office A.
+The nurse in a hurry is an extra in office B.
+The hospital staff woman is an extra in office C.
+
+The blond woman is an extra. It is in the waiting room.
+The smiling man wearing a baseball cap is an extra in the waiting room.
+The large Hawaiian man is an extra in the waiting room.
+The college kid wearing Bruins shirt is an extra in the waiting room.
+The guy talking on his cell phone is an extra in the waiting room.
+The well dressed businessman is an extra in the waiting room.
+The janitorial worker is an extra in the waiting room.
+The teenage kid is an extra in the waiting room.
+
+[Simulate believable foot traffic of all extras with increasing
+likelihood of movement tied to the phase of the game]
+Every turn:
+	repeat with randomGuy running through extras:
+		if a random chance of game phase in 5 succeeds:
+			let current space be the location of randomGuy;
+			let next space be a random room which is adjacent to the current space;
+			if next space is a street and current space is a street and randomGuy is visible:
+				say "[a randomGuy] is trying to cross the busy street.";
+			otherwise:
+				if randomGuy is visible, say "[a randomGuy] [one of]is going toward[or]is walking [one of]toward[or]to[or]in the direction of[at
+random][or]walks to[or]heads to[or]is heading for[at random] [next space].";
+				move randomGuy to next space;
+				if randomGuy is visible, say "[a
+randomGuy] [one of]is coming this
+way[or]is coming here[or]comes in[or]came in[or]passed you
+by[or]stumbles in[or]strolls in[or]wanders in[or]shows
+up[or]passes[or]comes by[at random], [one of]apparently from[or]looks
+like from[or]from[or]just got out from[or]having exited[or]apparently
+from[or]apparently having exited[or]having just gotten out
+of[or]leaving[or]having just left[or]having left[or]just left[or]from
+the direction of[at random] [current space].".
+
+
+[Instead of moving an extra to a street, say "[the noun] is trying to
+cross the street."]
+
+
+[player]
+The game phase is a number variable.
+[Before opening a locked door, try unlocking the door.]
+[Instead of telling anyone about something, try asking about it.]
+Every turn:
+	If (the location of the player is the bathroom), say "du du daaah";
+	If the player is in a vehicle, say "this is [location], from here you
+can drive to [list of streets adjacent to location].".
+
+Understand "listen to your heart" and "listen to yourself" as listening.
+Instead of listening, say "-- [one of]you hear music, but it's not
+coming from any speaker. You make out the lyrics[or]I remember when, I
+remember[or]I remember when I lost my mind[or]There was something so
+pleasant about that place[or]even your emotions have an echo[or]in so
+much space[or]and when you're out there without care[or]Yea, I was out
+of touch[or]But it wasn't because I didn't know enough[or]I just knew
+too much[or][bold type][italic type]Does that make me crazy?[roman
+type][stopping]...."
+
+
+
+[Scene -- beginning plot exposition]
+Intro is a scene. Intro begins when the player is in the bedroom for
+second turn. Intro ends when the time since Intro began is one minute.
+
+When Intro begins:
+       say "Once again, you start counting the tiles on your floor...
+'1, 2, 3, 4'".
+
+When Intro ends:
+       say "You have managed to get your mind away from the fruitless tile
+counting. Now you are listening to a song in your head".
+
+SuicideScene is a recurring scene. SuicideScene begins when a random
+chance of game phase in 10 succeeds. SuicideScene ends when the time
+since SuicideScene began is one minute.
+
+When SuicideScene begins:
+       say "You begin hearing a voice in your head.[italic type]'[one of]In
+death you find the most beautiful element of life:
+nothingness.[or]Falling... isn't it worth the thrill of life for those
+few precious moments?[or]Kill yourself![or]You must kill to be
+free[or]Freedom is yours, will you do what you must?[or]There is a
+thing called life. It is overrated[or]The 405 freeway is where you
+belong, it will be return to nature of sorts for you[or]Follow the
+source of your song, it shall lead you to death and to
+freedom[or]There are things known, and things unknow and in between
+are the poster doors...[or]If you become the enemy, you must have the
+courage to be your own friend[cycling]'[roman type]".
+
+When SuicideScene ends:
+       say "The voice went silent.".
+
+
+StarloveTalk is a scene. StarloveTalk begins when the player is in
+Office E and game phase is greater than 1 and game phase is less than
+4. StarloveTalk ends when the time since StarloveTalk began is one
+minute.
+
+When StarloveTalk begins:
+	repeat with X running through extras who are in Office E:
+		move X to waiting room;
+	say "Dr. Starlove gets up to greet you. He has his long hair in a
+pony tail. He is wearing sandals with socks and a pair of long shorts
+underneath his white lab coat. Although its clear he is young at
+heart, he is actually nearing retirement age. Instead of medical
+diagrams and posters, there is a 'Your guide to the world of hemp'
+yearly calendar on his wall.[paragraph break]- [italic type]Hi, nice
+to meet you. I hope I'm not disturbing showing up without an
+appointment like this[roman type].[paragraph break]'Oh no, no,' he
+says 'not to worry, I was going to call you anyway. But between you
+and me, I'm not sure the bean-counters upstairs were ever going to
+schedule a session for you anyway.'[paragraph break]- [italic type]Oh
+good. I really couldn't take another round of this bureocratic
+neightmare. Thank You so much for seeing me.[roman type][paragraph
+break]You sit down and start telling the good doctor all the problems
+you've been having. While you're talking he gets up and closes the
+door and locks it after saying something to a staff worker outside. He
+then comes back and listens with enthusiasm.[paragraph break]When
+you're done, he gets up and walks around, taking off his glasses and
+nerviously chewing at the handles, pacing back and forth.[paragraph
+break]- You see, you are in a curious place. Your mind is trying to
+tell you something. Your body had soul is trying to warn you about
+something. But the language it is using... well, that's not so easy to
+understand, you see? [paragraph break]You look on nervously.";
+	say "- The trick is figuring out... how to best listen to yourself.
+Have you ever tried listening to yourself?[paragraph break][italic
+type]- But Doctor, most of the time the voice is telling me to kill
+myself![roman type][paragraph break]- Yes, but what does that really
+mean? It is obviously a metaphore... a symbolic action. What if the
+killing is all symbolic? What if you are symbolic yourself? I mean,
+that place on the freeway, have you ever been there in real life? I
+mean ever just stand there and see what it feels like? What if this is
+a dream where killing doesn't actually kill anybody?[paragraph
+break][italic type]- I'm not sure... are you asking me to kill
+myself?[roman type].[paragraph break]Starlove looks at you for a
+minute with an expressionless face. And then he suddenly breaks into a
+smile. 'Of course not. Don't be silly... I'm just saying you have to
+keep an open mind about life'. He gets up, opens the door and appears
+to gesture for you to leave.[paragraph break][italic type]- Wait, what
+about the voice? It's getting louder and more frequent![roman
+type][paragraph break]- Yes, yes, breathe heavily and think about
+life. Think about your place in life.[paragraph break]He all but
+shoves you out of the office. You stand there confused with a growing
+sense of anger.";
+	now the game phase is game phase + 1;
+	if game phase is greater than 3, now the poster is unlocked;
+	move player to corridor;
+	remove Dr Starlove from play.
+
+
+KochTalk is a scene. KochTalk begins when the player is in Dr Kochs
+office and game phase is greater than 1 and game phase is less than 4.
+KochTalk ends when the time since StarloveTalk began is one minute.
+
+When KochTalk begins:
+	repeat with X running through extras who are in Dr Kochs office:
+		move X to waiting room;
+	say "Dr. Koch glances at you quickly, but then turns his head again
+and squints his eyes! 'Are you Ze... I have been expecting you mein
+freund!' he says in a thick German accent. He quickly gets rid of the
+person he was working with and invites you to sit down. 'Your case has
+been Ze most extaordinary, I was beginning to Zink that I would not
+have Ze plasure of meeting you!' This sets your mind a bit at ease.
+'Thank You Dr. Koch, I'm just glad I found you. My condition is
+deteriorating rapidly.'[paragraph break]- Yes, tell me everyTing! Do
+you still have the same symptoms?[paragraph break]- [italic type]Yes,
+and they are much worst! I keep noticing more and more people and
+moving things all the time. It's like I'm obsessed. I can't stop
+myself rom noticing or counting things! People cars, etc. The voice in
+my head is getting more distruptive. It continues to urge me to kill
+myself. Can you help me, doctor?[roman type][paragraph break]";
+	say "- Only you can help you meine freund! But I Vill give you some
+help and direcT-ion. Your case has interested me for Ze longest time.
+It is cleaYa Zat you have a second mind! A second personality vich is
+trying to take over! You must not let is do Zat! You must Resist!
+Resist! Resist! Zis onslaught on your mind. Ze noombers, Zey are Ze
+discipline parts of your mind. Zey are fighting against Ze less
+structured and less discipline parts. You must embrace Ze numbers! Ze
+counting ist gut! You must use Ze numbers to kill Ze other
+self![paragraph break]Doctor Koch is getting more excieted and
+agitated. You begin to get concerned. You can't make sense of out of
+any of it. Is 'Zis' guy telling you to kill yourself too? with
+numbers? How can that be done?[paragraph break]";
+	say "Koch is getting ready to leave the office. 'No, do not leave me,
+I still need help!' you scream desperately. Koch walks up to you and
+grabs both of your shoulders. 'You must listen to Ze voice, find Ze
+voice and kill Ze voice! You must kill Ze source of the voice! Do not
+go in Zer unarmed!' He than exits abruptly leaving you wandering and
+confused and even more angry. 'The voice is from my head. The songs
+are from my had, so I should destory my own head? What is the source
+that he's talking about?'";
+	now the game phase is game phase + 1;
+	if game phase is 4, now the poster is unlocked;
+	remove Dr Koch from play.
+
+[Scene -- trigger the final chamber]
+FinalScene is a scene. FinalScene begins when the player is in the
+chamber for one turn and the game phase is greater than 3. FinalScene
+ends when the time since FinalScene began is 10 minutes.
+
+When FinalScene begins:
+       say "The place looks like a dark cave with stone walls like something
+out of a Sci Fi movie. Before you stands someone with an increadible
+physical resembolance to yourself. The face, the hair, the body, even
+the clothing is exactly the same as what you are wearing now. Except
+this person is wearing a white lab coat with a name tag which reads
+Dr. Y.O.U. In front of him is a hospital bed with someone lying on it
+that also looks like you. The one lying down is completely motionless.
+Dr. Y does not notice your presence. He suddenly puts both of his
+hands around the neck of the person lying on the hospital bed. With an
+evil tooth-flashing grin and rapid nervous movement of his eyebrows,
+he begins choking the 'patient.' You feel your own neck getting
+pressured as if someone is choking you. 'Why don't you just die?' You
+hear your own voice coming out of Dr. Y. It sounds a lot like the same
+voice that has been talking to you all along.".
+
+When FinalScene ends:
+       say "You fall to the ground as the oxygen to your body has now been
+cut completely by the choking sensation you feel.";
+       end the game saying "[ending4]".
+
+
+[Text instantials]
+To say Opening text: say "It is a windy day and you find yourself on
+the edge of the 405 freeway overpass close to your house, trying to
+commit suicide. Below your feet is the 405. It is not that busy a day,
+there is not much traffic. But there are dozens of cars passing
+underneath you at high speeds. All kinds of cars: big rigs, sedan's,
+sports cars, even motorcycles. You find yourself trying to count the
+cars and keeping track of them.... this is an annoying habit that
+wastes your time, but you can't help it. It has been a problem for you
+ever since you were a kid. You notice everything. You would count
+cars, count people, note what they are wearing or what color the cars
+are. More than once have you gotten in to an accident when your mind
+was off wondering how many Honda Civics you saw today on the freeway.
+More than once have you been fired for staring endlessly out the
+window into the streets of the San Fernando Valley looking at the
+fast-walking passers-by and the chuckling tourists stumbling through
+crosswalks while photographing everything... You [italic type]have
+always hated yourself for this[roman type]... Even now, in the last
+moments of your life, you can't stop it. [paragraph break] You don't
+know how you got here or why you are about to jump to you death in the
+freeway below. It is as if someone is wispering in your ear that this
+is what you must do. You only wonder if you can keep yourself from
+counting cars during the very act of plunging to your demise. It is
+not a comfortign thought, but it keeps your mind off what you theorize
+would be the most painful moments of your life.... [paragraph break]
+Suddenly you wake up sweating in your bed. Another frustrating
+nightmare, frustrating because it's so close to reality that it makes
+you wonder sometimes. It's not even 7AM, the sun is barely up. When
+will this all end? Will today be the day you free yourself from...
+yourself? Your appointment is this morning at the Kaiser building.".
+
+To say ending1: say "The bullet kills you instantly.[paragraph break]
+At a press conference the next day, US Army physician, Dr. Bob Cook is
+heard explaining 'the subject was unfortunately suffering from a
+severe case of multiple personalities. The subject was not able to
+deal with the increasing mental stress and uncertainty and chose a
+tragic ending instead".
+To say ending2: say "Moments later You are running frantically in the
+streets. You repeatedly ignore the calls of the police to stop and
+surrender your weapon. You are presumed armed and dangerous. Finally,
+the police shoot you in the chest. [ending1]".
+To say ending3: say "[ending1].".
+To say ending4: say "At a press conference the next day, US Army
+physician, Dr. Bob Cook is heard explaining 'The subject had a very
+slim chance of coming out of the coma to begin with. He was fighting
+for a long time, but it appears he was just not strong enough to
+overcome his condition. He simply lost the will to live'.".
+To say ending5: say "The next day you wake up refreshed from your 3
+month long coma in your bed in the military facility. US Army
+physician Dr. Bob Cook and your family are by your side. Everyone is
+congratulating you and telling you what unlikely odds you must have
+overcome after your tragic battlefield head injury. The remenants of
+audio excercises that were perscribed by Dr. Cook's unorthodox methods
+are in the room. A taped voice is heard playing random sequences of
+numbers. Another voice constantly describes pieces of different shapes
+and colors: 'The black square peg is next to the white circular peg.
+The green triangle is now on top of the purple square peg...'".
+
+When play begins:
+       now the game phase is 1;
+       say "[Opening text]";

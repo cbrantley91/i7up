@@ -1,0 +1,25 @@
+<project name="i7up" default="run-sc-test" basedir=".">
+    <description>
+        Simple build file for running the project
+    </description>
+  <!-- set global properties for this build -->
+  <property name="main" location="./i7up.py" />
+  <property name="src" location="src"/>
+  <property name="test"  location="test"/>
+  <property name="rw-test" location="${test}/realworld-examples/" />
+  <property name="annotator-out" location="${test}/ann.out" />
+  <property name="generator-out" location="${test}/gen.out" />
+  <property name="s-formats" location="./resource/sFormats.in" />
+
+  <target name="run-sc-test">
+    <exec executable="python" dir=".">
+      <arg line="${main} -i ${rw-test}/second-chance.txt" />
+    </exec>
+  </target>
+
+  <target name="run-dm-test">
+    <exec executable="python" dir=".">
+      <arg line="${main} -i ${rw-test}/damnatio-memoriae.txt" />
+    </exec>
+  </target>
+</project>

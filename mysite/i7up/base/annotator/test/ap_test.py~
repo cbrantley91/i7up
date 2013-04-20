@@ -1,0 +1,8 @@
+import annotator.a_parser as ap
+
+def test1():
+    fmt = ap.parseIntoFormat('There is <n> to <i> but <i>')
+    sentence = 'There is nothing to fear but fear itself'
+    res = ap.checkMatchFormat(fmt, sentence)
+
+    assert res == [['nothing'], [['fear'], ['fear', 'itself']]]

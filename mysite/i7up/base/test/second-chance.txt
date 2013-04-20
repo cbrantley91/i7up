@@ -1,0 +1,299 @@
+"Second Chance" by Tag
+
+Include Default Messages by David Fisher.
+Include Small Kindnesses by Aaron Reed.
+
+Use no scoring.
+Use American Dialect.
+
+Part - Mechanics
+
+Chapter - Beginning the Story
+		
+Rule for printing the banner text while turn count is 1: say "".
+
+The player is in the Foyer.
+
+
+Chapter - Ending the Story
+
+When Final Chapter begins, end the game saying "You breath a sigh of relief. You're getting a second chance...".
+
+Chapter - Scenes
+
+Decrepit House is a scene. 
+	"[bold type]Second Chance[roman type], by Taggart Ashby[paragraph break][bold type]Chapter 1: [italic type]Where am I?[roman type][paragraph break]You wake up with a splitting headache, so bad you swear you've been hit with a bat."
+Decrepit House begins when play begins.
+
+When Decrepit House ends, now Foyer Door is unlocked.
+
+Worn House is a scene. 
+	"[bold type]Chapter 2: [italic type]Old Memories[roman type][paragraph break]Suddenly the house becomes more lively. The dust and rot have vanished and everything is in better condition.
+	The foyer door lock clicks and you can see that it's now unlocked."
+Worn House begins when Decrepit House ends.
+
+When Worn House begins:
+	[reset story items for use in next phase]
+	now all story items are closed;
+	[get some information]
+	try looking;
+	try examining house.
+
+New House is a scene. 
+	"[bold type]Chapter 3: [italic type]New Beginnings[roman type][paragraph break]The house becomes vibrant. Washed out colors return to their former glory, dirt and dust cease to exist, all signs of wear disappear.
+	You'd like to look around now that everything's brand new and maybe pick up a few things for old time's sake."
+New House begins when Worn House ends.
+
+When New House begins:
+	try looking;
+	try examining house.
+	
+When New House begins:
+	Now all undescribed things are described;
+	Now player is undescribed.
+	
+Final Chapter is a scene.
+	"[bold type]Final Chapter: [italic type]The End[roman type][paragraph break]The house grows all around you as you shrink down to a baby. Your mind is racing, this can't be real! You scream for help. Your parents just look at you and smile. You yell for help, but none of your words are coherent. Your parents scoop you up and rock you back and forth. You try to tell them what's going on, but they can't understand you. Suddenly all the mistakes you've made in your life cascade through your head like a dam let loose: relationships you should have ended sooner, relationships you shouldn't haven't ended, those decisions you made, the terrible things you did to people you cared for, beating yourself up for things you had no control over, ..... so many memories. You calm down and your parents set you back down in the Play Room to play with your toys, [list of things held by player]."
+Final Chapter begins when New House ends.
+
+Chapter - Types
+
+[Total hack, there's no "examined" adjective, so I had to improvise.]
+A story item is a kind of container. A story item is usually closed.
+
+Chapter - Actions
+
+["Open" story items have been 'examined', closed items have not been. Like I said, hack, but it works.]
+After examining a story item (called obj), now the obj is open.
+
+Instead of inserting a thing into a story item, say "You go to set it down, but you have too fond of memories. You hold onto it."
+Instead of putting or dropping anything, say "You go to set it down, but you have too fond of memories. You hold onto it."
+
+After going to anywhere when New House is not happening:
+	say "[one of]Floor boards creak and moan.[or]The hinges of the door squeak as you open it and move through.[or]Dust clouds surround your feet as you walk.[at random]";
+	try looking.
+	
+After examining a closed story item (called obj) when Worn House is happening:
+	now the obj is open;
+	say "[one of]There's that whizzing sound again... Maybe the house will change again soon![or]You hear the magic sound once again... You're excited for what may be coming soon.[or]It sounds as though something will happen like last time if you keep at it...[at random]".
+	
+Every turn when New House is happening:
+	if the number of things held by player is greater than 2 and the player is not in the Play Room:
+		say "The Play Room is beckoning you, maybe you should head [if the player is in Bathroom]south[otherwise if the player is in Nursery]north[otherwise]east[end if].";
+	otherwise if the number of things held by player is greater than 2 and the player is in the Play Room:
+		now the mystery door is unlocked;
+		say "[first time]The mysterious door seems to be unlocked.[only]".
+		
+After going to Play Room when the mystery door is unlocked, say "The mysterious door seems to be unlocked.".
+	
+Part - Setting
+
+Chapter - In the House
+
+Section - House
+
+The WholeHouse is a region. The Foyer, Play Room, Bathroom, Nursery, and Parent's Room are in the WholeHouse.
+
+The house is a backdrop in the WholeHouse. 
+	"[if Decrepit House is happening]This house seems so familiar, but you can't put your finger on it.
+	[otherwise if Worn House is happening]This is your childhood home, a little more beat up than you remember though.
+	[otherwise if New House is happening]It's like you never grew up... if only.[end if]".
+
+Section - Foyer
+
+The Foyer is a room. 
+	"[if Decrepit House is happening][first time]Slowly the [world] comes into focus and you find yourself in a [house]. As you stand up and brush yourself off, small [dust clouds] form. [only]To the west is the [front door], ornate and grand, but splintered and buckling after what appears to be decades of neglect. To the east is the [foyer door] leading further into the [house]. On the wall in front of you hangs a [picture]. Behind you there is a [bookcase] filled with dusty [books]. To get any more details, you'd have to take a closer look.
+	[otherwise if Worn House is happening][first time]You can't believe your eyes! The front door slowly fills in its cracks with new wood and paint, rust dissolving from the hinges. The picture comes back into focus. The spines on the books stiffen and strengthen. [only]To the east is the foyer door. You can make out the picture now, a family portrait. The bookcase shines a little, the remnants of a lacquer applied a while ago, and book titles can be seen.
+	[otherwise if New House is happening][first time]The novelty of a house becoming newer still hasn't worn off. [only]The front door is beautiful, hand-crafted designs etched into the rich mahogany. The picture is crystal clear, as if it were printed yesterday. The books are clean and look like they've never been opened. To the east is the door to the Play Room.[end if]".
+
+The world is a fixed in place supporter in the Foyer. The world is scenery.
+Instead of doing anything to the world, say "You can't be serious."
+
+The dust clouds are scenery in the Foyer. "You inhale a little dust and cough violently."
+
+Understand "clouds" as the dust clouds.
+
+The front door is a door and scenery. The front door is east of Unused and west of the Foyer. The front door is locked.
+The description of the front door is 
+	"[if Decrepit House is happening]The hinges have rusted, orange and brown streaks, and the wood is splintered. You're not even sure the door would open.
+	[otherwise if Worn House is happening]The door shows signs of age: the hinges are discolored, the paint is starting to chip, and there are scuff marks at the base.
+	[otherwise if New House is happening]The deep color draws you in. You smell a faint hint of that deep mahogany and run your fingers along the carvings just like you used to do as a kid. The paint is smooth under your fingers.[end if]".
+
+Instead of opening the front door, say "As you reach for the handle, it disappears... [one of]freaky. [or]weird. [or]what is this place. [or]that's not good. [at random]Guess you won't be leaving anytime soon."
+
+The foyer door is a door and scenery. The foyer door is east of the Foyer and west of the Play Room. The foyer door is locked.
+
+The picture is a fixed in place story item in the Foyer. The picture is scenery. 
+The description of the picture is 
+	"[if Decrepit House is happening]The frame is barely holding together. The picture is unrecognizeable from the decay and water damage.
+	[otherwise if Worn House is happening]The frame is simple, something your parent's picked up at a general store without much thought. It has been scratched and is a bit dusty. The picture is still clear, one of those silly family portrait settings where you all where matching attire.
+	[otherwise if New House is happening]The frame is clean and smooth, nothing fancy, but brand new. The picture is clear, you're sitting in a soothing blue room, sandwiched between your parents and other family. Everyone looks so happy, including you.[end if]
+	[if Decrepit House is happening and books are closed][first time][paragraph break]You hear a faint whizz coming from all around, what you imagine magic would sound like, if such a thing were real.[only][otherwise if Decrepit House is happening and books are open][paragraph break]Something strange is happening to the [house]....[end if]".
+	
+Understand "frame" or "portrait" as the picture.
+
+The bookcase is a fixed in place story item in the Foyer. The bookcase is scenery. 
+The description of the bookcase is 
+	"[if Decrepit House is happening]The bookcase is barely holding together. The [wood] is dry and cracking, the [shelves] bow under the weight of the [books]. You wonder what condition the [books] are in.
+	[otherwise if Worn House is happening]The bookcase looks beat up, but structurally sound. The [wood] is much nicer, rough to the touch, but at least you can touch it without fear of it falling apart. The [books] are in better shape as well.
+	[otherwise if New House is happening]The bookcase shines, freshly laquered. You can smell the wood as if it came from the mill yesterday. The books are all brand new.[end if]"
+	
+The wood is a fixed in place story item in the Foyer. The wood is scenery.
+The description of the wood is
+	"[if Decrepit House is happening]Dry and cracking, it hasn't been cared for in a long time.
+	[otherwise if Worn House is happening]Rough to the touch, but in tact and clean.
+	[otherwise if New House is happening]Smooth to the touch and shining, a deep brown oak.[end if]"
+	
+The shelves are a fixed in place story item in the Foyer. The shelves are scenery.
+The description of the shelves is
+	"[if Decrepit House is happening]The weight of the books causes them to sag heavily, nearly to the point of breaking.
+	[otherwise if Worn House is happening]They are starting to show signs of wear from books being moved in and out.
+	[otherwise if New House is happening]Smooth and unmarked, there aren't even scuffs from any books yet.[end if]"
+
+The books are fixed in place story items in the Foyer. The books are scenery.
+The description of the books is 
+	"[if Decrepit House is happening]The books are dirty and falling apart. Pages are ripped and the spines of most of them are barely staying together.
+	[otherwise if Worn House is happening]The books are in fine condition, many of them are very worn, but definitely in tact.
+	[otherwise if New House is happening]The books look brand new.[end if]
+	[if Decrepit House is happening and picture is closed][first time][paragraph break]You hear a faint whizz coming from all around, what you imagine magic would sound like, if such a thing were real.[only][otherwise if Decrepit House is happening and picture is open][paragraph break]Something strange is happening to the [house][end if]".
+
+Instead of taking or touching the books when Decrepit House is happening, say "You're afraid if touch them they will fall apart."
+
+The dinosaur book is in the Foyer. The dinosaur book is undescribed.
+The description of the dinosaur book is
+	"You haven't seen that dinosaur book in a long time. You loved that book as a kid! Heck, you knew the names of every one of those [dinosaurs]. You think you may just take it for old times sake."
+	
+The rain boots are in the Foyer. The rain boots are undescribed.
+The description of the rain books is
+	"Colorful and rubber and with the classic handles to help pull them up. You always loved jumping in puddles as a kid, heck you still like it now. These boots represent some great memories, perhaps you should bring them with you."
+
+The dinosaurs are fixed in place in the Foyer. The dinosaurs are scenery.
+The description of the dinosaurs is
+	"Triceratops, Astrodon, Velociraptor, you could go on and on.".
+
+Understand "dusty" as the books.
+
+Decrepit House ends when the picture is open and the books are open.
+
+Section - Play Room
+
+The description of the Play Room is
+	"[if Worn House is happening]You are in the play room. You used to spend all day in here with your [toys]. There is a pile of [toys] on the floor, discarded, old, and heavy used. To the north is a door with 'Bath' written on it in fading gold paint. To the south is door with 'Nursery' written on it in the same fading paint. To the east is a door with nothing written on it. Back to the west is the Foyer.
+	[otherwise if New House is happening]All of your favorite toys lie on the floor, they look like they've just been unpackaged. You can't help but feel excited all over again. To the north is a door with 'Bath' written on it in shining gold paint. To the south is door with 'Nursery' written on it in the same glinting paint. To the east is a door with nothing written on it. Back to the west is the Foyer.[end if]
+	[if mystery door is unlocked]The door to the east seems unlocked now.[end if]".
+
+The toys are a story item in the Play Room. The toys are scenery.
+The description of the toys is
+	"[if Worn House is happening]The toys are broken or nearly broken from intense use, no one ever said you were gentle with your toys.
+	[otherwise if New House is happening]You pick up a few toys and play with them just like the ol' days. All the buttons and levers still function, clearly you haven't gotten your hands on them yet.[end if]".
+
+The legos are in the Play Room. The legos are undescribed. The printed name of legos is "bucket of legos".
+The description of the legos is
+	"Bucket full of legos. You spent countless hours building and destorying anything your imagination could come up with. You could still have some fun with them now, why not take them."
+	
+The inflatable ball is in the Play Room. The inflatable ball is undescribed.
+The description of the inflatable ball is
+	"It didn't matter what sport you were playing, this ball did it all. It's the only way your parent's got you away from your other toys and outside. If you take it with you, you can play those games all over again."
+
+Understand "pile" or "pile of toys" as the toys.
+
+Understand "play with [something]" as examining.
+
+The bathroom door is a door and scenery. The Bathroom Door is north of the Play Room and south of the Bathroom.
+
+The nursery door is a door and scenery. The Nursery Door is south of the Play Room and north of the Nursery.
+
+The mystery door is a door and scenery. The mystery door is east of the Play Room and west of the Parent's Room. The mystery door is locked.
+
+Worn House ends when the number of open story items is 6 and Bathroom is visited and Nursery is visited.
+
+New House ends when the mystery door is open.
+
+Section - Bathroom
+
+The description of the Bathroom is
+	"[if Worn House is happening]On your right is a [bathtub], off-white with rings in some corners from shampoo bottles that once sat there. On your left is the [bathroom counter], on which are some [toothbrushes]. Attached to the left wall is a large [mirror].
+	[otherwise if New House is happening]The bathtub enamel is a pure white, radiant and clean. The toothbrushes sit on the counter, their bristles stiff and unbent. The mirror is very clean.[end if]".
+
+The bathtub is scenery and a fixed in place story item in the Bathroom.
+The description of the bathtub is
+	"[if Worn House is happening]You never cared for baths, still don't know a single child who did. Now you'd shower all day if you could, funny how things change.
+	[otherwise if New House is happening]The tub is beautiful, the water handles stainless steel and shining. How could you ever hate bathing in this?[end if]".
+
+Understand "tub" as the bathtub.
+
+The bathroom counter is scenery and a fixed in place story item in the Bathroom.
+The description of the bathroom counter is
+	"[if Worn House is happening]The grout in between the tiles is dark brown. There's a sink and a toothbrush container.
+	[otherwise if New House is happening]The counter gleams, the grout is light brown and smooth, and the sink and toothbrush container are spotless.[end if]".
+
+The sink is scenery and a fixed in place story item in the Bathroom.
+The description of the sink is
+	"[if Worn House is happening]The sink is a yellowing white with gunk around the drain and a few strands of hair lying around.
+	[otherwise if New House is happening]The sink is a glittering white porcelain and the drain is polished steel.[end if]".
+
+The toothbrushes are scenery and a fixed in place story item in the Bathroom.
+The description of the toothbrushes is
+	"[if Worn House is happening]The toothbrushes show signs of wear, the bristles not all pointing the same way. Brushing your teeth was always something you tolerated. Not great, but way better than the baths.
+	[otherwise if New House is happening]The toothbrushes don't seem to have ever been used. Your parents even got one with a cool design on it so you'd have more fun brushing your teeth.[end if]".
+
+The mirror is scenery and a fixed in place story item in the Bathroom.
+The description of the mirror is
+	"[if Worn House is happening]The mirror is dotted with toothpaste mishaps and steam residue.
+	[otherwise if New House is happening]The reflection looks so good you could almost step into it.[end if]".
+	
+The rubber ducky is in the bathroom. The rubber ducky is undescribed.
+The description of the rubber ducky is
+	"There's a rubber duck! Now you remember; your parents bought it and you would chew on it while they bathed you. No bite marks on it now though. It always brought you luck and you think of taking it with you.".
+
+Section - Nursery
+
+The description of the Nursery is
+	"[if Worn House is happening]Covering the walls is a [yellow patterned wallpaper], faded and peeling. On the opposite wall is the [crib], [blankets] hang off the edge and through the open slots in the front you can see that the [bed] is haphazardly made. There's a [brown cushy chair] beside the crib where your parents used to sit when they read to you. The fuzz is worn down on the seat and in the middle of the back. To your immediate right is a [dresser], chunks are missing from one of the legs where the door would always hit it.
+	[otherwise if New House is happening]The walls are practically shining from the yellow. How did your parents stand being in this room? How did [italic type]you[roman type] stand being in this room? The [crib] is pristine, the little [bed] ready to be slept on, the [blankets] tucked in just right. The [chair] is furry and welcoming. Your old [dresser] is clean and in tact.[end if]".
+	
+The yellow patterned wallpaper is scenery and story item in the Nursery.
+	"[if Worn House is happening]The thin twisting white lines form that familiar pattern that stretches up to the ceiling. Bits of drywall are visible through the wallpaper where it's peeling or torn.
+	[otherwise if New House is happening]The wallpaper gleams, from certain angles the wallpaper appears completely white from the reflection of the overhead light.[end if]".
+
+The crib is scenery and a story item in the Nursery.
+	"[if Worn House is happening]This is where you slept for a long while. You don't rememeber it being so agitated, but you were just a little kid. You can now understand the futility of making the bed for a child, your parents must have given up at some point.
+	[otherwise if New House is happening]The pillow is fluffed and the blankets are tucked in and placed with precision. Nothing is out of place, it doesn't even seem used.[end if]".
+
+The blankets are scenery and a story item in the Nursery.
+	"[if Worn House is happening]Tossed over the crib willy-nilly. They probably were just laid on top of you when you slept.
+	[otherwise if New House is happening]Tucked into the crib perfectly. Your parents just had to pull them back a little and slide you in, cozy and warm.[end if]".
+
+The bed is scenery and a story item in the Nursery.
+	"[if Worn House is happening]Right where it should be in the crib.
+	[otherwise if New House is happening]Brand new and white as snow lying in the crib.[end if]".
+
+The mobile is a story item in the Nursery.
+	"[if Worn House is happening]Above the crib hangs a mobile of the solar system. Saturn is missing a [ring]. 
+	[otherwise if New House is happening]The whole solar system is on the mobile, and hey!, there's Saturn's [ring]. [end if]".
+The description of the mobile is "The complete solar system, even Pluto! Maybe you should take this with you, it's a memory of the past you don't want to forget.".
+
+Understand "solar system" as the mobile.
+
+Instead of taking the mobile when Worn House is happening, say "You'd rather just look around for now. Maybe later."
+
+your favorite blanket is in the Nursery. your favorite blanket is undescribed.
+The description of your favorite blanket is
+	"Your childhood safety blanket. You slept with it every night and often brought it with you all over the house. Even now it makes you feel safe and you could use that security."
+
+The ring is scenery and a story item in the Nursery.
+	"[if Worn House is happening]Saturn's ring is no where to be found.
+	[otherwise if New House is happening]The ring is back! It's attached with a thin piece of metal to the planet.[end if]".
+	
+Instead of taking the ring, say "Better not break it again."
+
+The brown cushy chair is scenery and a story item in the Nursery.
+	"[if Worn House is happening]Your parents used to read to you in this chair, and it shows. You can tell exactly where they sat just by the worn in pattern.
+	[otherwise if New House is happening]The chair is brand new, no marks, no scuffs. You miss those days when life was simple and you listened to your parents tell stories.[end if]".
+
+The dresser is scenery and a fixed in place story item in the Nursery.
+	"[if Worn House is happening]The dresser has seen better days, but it still functions. You open and close the drawers, nothing of interest in there.
+	[otherwise if New House is happening]The dresser has thin painted lines on top, you can't remember them every being there, but it was in heavy use back then.[end if]".
+	
+Instead of opening the dresser,
+	try examining the dresser.

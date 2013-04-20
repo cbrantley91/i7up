@@ -1,0 +1,11 @@
+<h1>I7UP Page</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'i7up:vote' poll.id %}" method="post">
+{% csrf_token %}
+<textarea name="input" cols="60" rows="5">
+Input your I7 Source here...
+</textarea><br>
+<input type="submit" value="Submit" />
+</form>

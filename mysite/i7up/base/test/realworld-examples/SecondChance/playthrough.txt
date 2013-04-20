@@ -1,0 +1,17 @@
+x books
+x picture
+x books
+x picture
+e
+x toys
+s
+x wallpaper
+x crib
+n
+n
+x toothbrushes
+take ducky
+s
+take legos
+take ball
+e
