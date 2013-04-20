@@ -30,8 +30,8 @@ def stripDets(t_list):
             return t_list[index:]
     return []
 
-def generate(infile, outfile, fileFlag=2):
-   gd.main(infile, outfile, fileFlag)
+def generate(rawText, fileFlag=2):
+   return gd.main(rawText, fileFlag)
 
 def annotate(intext):
     # Get raw and tagged sentences
