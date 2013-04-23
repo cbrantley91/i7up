@@ -1,5 +1,11 @@
 from nltk.corpus import wordnet as wn
 
+def evalObject(words):
+   str = '_'.join(words)
+   syn_sets = wn.synsets(str);
+   
+   return syn_sets
+
 def evalFirstSyn(words):
    synList = []
    str = '_'.join(words)
