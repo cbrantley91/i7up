@@ -34,26 +34,16 @@ def generate(rawText, fileFlag=2):
    return gd.main(rawText, fileFlag)
 
 def annotate(intext):
-    # Get raw and tagged sentences
-
     r_sents = ap.getRawSentences(intext)
     t_sents = ap.getTaggedSentences(r_sents)
     assert len(r_sents) == len(t_sents)
     rt_pairs = zip(r_sents, t_sents)
 
-#    for pair in rt_pairs:
-#        print pair
-
     r_sents = []
-    # Get items
-    #items = ap.findItemsFromFormats(fmts, t_sents)
-
-#    print '------------'
-#    print 'Found Items:'
-#    print '------------'
-
     out_list = []
     used_words = []
+    objStr = ''
+    objlist = []
 
     for pair in rt_pairs:
         r_sent = pair[0]
@@ -72,34 +62,27 @@ def annotate(intext):
                 #cut off things until a valid phrase is found
                     evPhrase = ([], res[0], [])
                     evalRes = ae.evalFirstSyn([word[0] for word in evPhrase[1]])
-#                    evalRes = ae.evalPhrase([word[0] for word in evPhrase[1]])
-
-                    while not evalRes and evPhrase[1]:
+                    evalObj = ae.evalObject([word[0] for word in evPhrase[1]])
+                    while not evalRes and evPhrase[1] and not evalObj:
                         stripped = ap.stripTagset(evPhrase[1])
                         evPhrase = (evPhrase[0] + stripped[0], stripped[1],
                                     stripped[2] + evPhrase[2])
                         evalRes = ae.evalFirstSyn([word[0] for word in evPhrase[1]])
-#                    while not evalRes and evPhrase[1]:
-#                       stripped = ap.stripTagset(evPhrase[1])
-#                        evPhrase = (evPhrase[0] + stripped[0], stripped[1],                \
-#                                    stripped[2] + evPhrase[2])
-#                        evalRes = ae.evalPhrase([word[0] for word in evPhrase[1]])
+                        evalObj = ae.evalObject([word[0] for word in evPhrase[1]])
 
-                    if evalRes:
+                        if evalRes and evalObj:
+                            objlist.append((' '.join([wt_pair[0] for wt_pair in evPhrase[1]]), evalObj))
+                        #objStr += ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + '\n'
+                        #objStr += str(evalObj).strip('[]')
+                        #objStr = objStr.replace(', ', '\n')
+                        #objStr += '\n\n'
                         #temp : to deal with proper noun issues
                         if 'NNP' in [word[1] for word in evPhrase[1]]:
                             break
                         s_list = evalRes
-#                    if evalRes:
-#                        s_list = []
-#                        for posType in evalRes:
-#                            for dictDef in posType:
-#                                for word in dictDef:
-#                                    if word not in s_list:
-#                                        s_list.append(word)
 
                         w_orig = ' '.join([wt_pair[0] for wt_pair in evPhrase[1]])
-                        if w_orig in s_list:
+                        if s_list and w_orig in s_list:
                             s_list.remove(w_orig)
 
                         if not s_list:
@@ -124,25 +107,12 @@ def annotate(intext):
 
                         break
 
-        out_list.append(r_sent)
-        #print 'Raw Sentence : ', r_sent
+#        out_list.append(r_sent)
 
-    #print '--------------------\nFound Items\n------------------'
-
-    #for item in items:
-    #    print item
-
-    #ofile = open(outfile, 'w')
-    #for string in out_list:
-    #    ofile.write(string)
-    #ofile.write('\n')
-
-    # Write copy to file
-    #ofile.close()
     s = ''
     for string in out_list:
         s += string
-    return s
+    return objlist
 
 #parser = argparse.ArgumentParser(description='Inform 7 Usability Precompiler')
 #parser.add_argument('-a', default='full', help='Whether or not you want to just annotate, generate, or do both.  Input "annotate", "generate", or "full". Defaults to full.')

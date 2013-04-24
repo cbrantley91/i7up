@@ -30,6 +30,8 @@ def results(request):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return render(request, 'i7up/detail.html', {
-                'result_message' : i7.generate(i7.annotate(i7code.encode("utf8","ignore")))
+#                'result_message' : i7.generate(i7.annotate(i7code.encode("utf8","ignore")))
+#                })
+                'result_message' : str(i7.annotate(i7code.encode("utf8","ignore")))
                 })
 #        return HttpResponseRedirect(reverse('i7up:result', args=(i7code,)))
