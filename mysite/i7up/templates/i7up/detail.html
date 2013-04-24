@@ -9,4 +9,14 @@ Input your I7 Source here...
 
 {% if result_message %}<p><pre>{{ result_message }}</pre></p>{% endif %}
 
+{% if opts %}
+{% for opt in opts %}
+<p>{{ opt.0 }}</p>
+{% for choice in opt.1 %}
+<input type="radio" name="{% filter force_escape %}{{ opt.0 }}{% endfilter %}" value="{% filter force_escape %}{{ choice.definition }}{% endfilter %}">{{ choice.definition }}</input>
+<br></br>
+{% endfor %}
+{% endfor %}
+{% endif %}
+
 </form>
