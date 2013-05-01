@@ -1,0 +1,21 @@
+<h1>I7UP Page</h1>
+
+<form name="textform" action="{% url 'i7up:results'%}" method="post">
+
+{% csrf_token %}
+
+<pre>{% if error_message %}{{ error_message }}{% endif %}</pre>
+<textarea name="i7code" cols="60" rows="5">Input your I7 Source here...</textarea><br>
+<input type="submit" value="Parse" />
+</form>
+
+<form name="selectform" action="{% url 'i7up:results'%}" method="post">
+
+{% csrf_token %}
+
+
+
+<input type="submit" value="Generate" />
+{% endif %}
+
+</form>

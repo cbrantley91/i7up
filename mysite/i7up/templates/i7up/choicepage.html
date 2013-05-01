@@ -1,0 +1,19 @@
+<h1>I7UP Definition Select</h1>
+
+<form name="selectform" action="{% url 'i7up:results'%}" method="post">
+
+{% csrf_token %}
+
+{% if opts %}
+{% for opt in opts %}
+<p>{{ opt.0 }}</p>
+{% for choice in opt.1 %}
+<input type="radio" name="{% filter force_escape %}{{ opt.0 }}{% endfilter %}" value="{% filter force_escape %}{{ choice.definition }}{% endfilter %}">{{ choice.definition }}</input>
+<br></br>
+{% endfor %}
+{% endfor %}
+
+<input type="submit" value="Generate" />
+{% endif %}
+
+</form>
