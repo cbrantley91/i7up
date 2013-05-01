@@ -1,22 +1,28 @@
 <h1>I7UP Page</h1>
 
-<form action="{% url 'i7up:results'%}" method="post">
-{% csrf_token %}
-<textarea name="i7code" cols="60" rows="5">
-Input your I7 Source here...
-</textarea><br>
-<input type="submit" value="Submit" />
+<form name="textform" action="{% url 'i7up:results'%}" method="post">
 
-{% if result_message %}<p><pre>{{ result_message }}</pre></p>{% endif %}
+{% csrf_token %}
+
+<pre>{% if error_message %}{{ error_message }}{% endif %}</pre>
+<textarea name="i7code" cols="60" rows="5">Input your I7 Source here...</textarea><br>
+<input type="submit" value="Parse" />
+</form>
+
+<form name="selectform" action="{% url 'i7up:results'%}" method="post">
+
+{% csrf_token %}
 
 {% if opts %}
 {% for opt in opts %}
 <p>{{ opt.0 }}</p>
 {% for choice in opt.1 %}
-<input type="radio" name="{% filter force_escape %}{{ opt.0 }}{% endfilter %}" value="{% filter force_escape %}{{ choice.definition }}{% endfilter %}">{{ choice.definition }}</input>
+<input type="radio" name="{% filter force_escape %}{{ opt.0 }}{% endfilter %}" value="{% filter force_escape %}{{ choice.lemma_names }}{% endfilter %}">{{ choice.definition }}</input>
 <br></br>
 {% endfor %}
 {% endfor %}
+
+<input type="submit" value="Generate" />
 {% endif %}
 
 </form>
