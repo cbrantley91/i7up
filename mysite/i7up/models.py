@@ -1,6 +1,6 @@
 from django.db import models
 import datetime
-from django.utils import timezone
+#from django.utils import timezone
 
 class MyPoll(models.Model):
     question = models.CharField(max_length=200)

@@ -29,10 +29,10 @@ def results(request):
                     pass
             #print str(request.POST);
             return render(request, 'i7up/detail.html', {
-                'error_message' : e_message
+                'error_message' : e_message,
+                'pageurl' : request.get_full_path()
             })
 #        return HttpResponseRedirect(reverse('i7up:result', args=(i7code,)))
 
 def gen_page(request):
-    for key, value in request.POST:
-        return render(request, 'i7up/detail.html', {})
+    return render(request, 'i7up/detail.html', {})
