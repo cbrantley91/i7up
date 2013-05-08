@@ -75,7 +75,7 @@
                <h2>Insert I7 Source</h2>
               <form name="textform" action="{{ pageurl }}" method="post">
 
-{% csrf_token %}
+              {% csrf_token %}
 
                 {% if error_message %}<pre>{{ error_message }}</pre>{% endif %}
                 <textarea name="i7code" cols="60" rows="5" class="span12">Your I7 Source goes here...</textarea><br>
@@ -85,9 +85,9 @@
               {% if htmlgentext %}
                  <form name="textform" action="{{ pageurl }}" method="post">
                    {% csrf_token %}
-
-                   {% htmlgentext %}
-
+                   {% autoescape off %}
+                   {{ htmlgentext}}
+                   {% endautoescape %}
                  <input type="submit" value="Generate" />
                  </form>
               {% endif %}

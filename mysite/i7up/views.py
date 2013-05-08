@@ -13,8 +13,12 @@ def results(request):
 
     if i7code:
         request.session['rawcode'] = i7code
-        return render(request, 'i7up/detail.html', {
-            'opts' : i7.get_opts(i7code.encode("utf8","ignore"))
+        htmlgentext, topts = i7.objgen(i7code)
+        htmlgentext = '<pre>' + htmlgentext + '</pre>'
+        return render(request, 'i7up/html-genned.html', {
+# TODO change opts to returned
+            'opts' : i7.get_opts(i7code.encode("utf8","ignore")),
+            'htmlgentext' : htmlgentext
         })
     else:
         e_message = ''
@@ -25,10 +29,10 @@ def results(request):
             except AttributeError:
                 pass
             #print str(request.POST);
-        return render(request, 'i7up/detail.html', {
+        return render(request, 'i7up/html-genned.html', {
             'error_message' : e_message,
             'pageurl' : request.get_full_path()
         })
 
 def gen_page(request):
-    return render(request, 'i7up/detail.html', {})
+    return render(request, 'i7up/html-genned.html', {})

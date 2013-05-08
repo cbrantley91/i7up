@@ -10,7 +10,6 @@ import optparse
 
 print rldr.message
 
-
 def stripDets(t_list):
     for index in range(len(t_list)):
 #        print 'POS : ', t_list[index][1]
@@ -22,6 +21,97 @@ def stripDets(t_list):
 
 def generate(rawText, fileFlag=2):
    return gd.main(rawText, fileFlag)
+
+def objgen(intext):
+    r_sents = ap.getRawSentences(intext)
+    t_sents = ap.getTaggedSentences(r_sents)
+    assert len(r_sents) == len(t_sents)
+    rt_pairs = zip(r_sents, t_sents)
+
+    r_sents = []
+    out_list = []
+    used_words = []
+    objStr = ''
+    objlist = []
+
+    for pair in rt_pairs:
+        r_sent = pair[0]
+        t_sent = pair[1]
+        blacklisted = False
+
+        for fmt in bfmts:
+            if ap.checkMatchFormat(fmt, t_sent):
+                blacklisted = True
+                break
+
+        if not blacklisted:
+            for fmt in wfmts:
+                res = ap.checkMatchFormat(fmt, t_sent)
+                if res:
+                #cut off things until a valid phrase is found
+                    evPhrase = ([], res[0], [])
+                    evalRes = ae.evalFirstSyn([word[0] for word in evPhrase[1]])
+                    evalObj = ae.evalObject([word[0] for word in evPhrase[1]])
+                    while not evalRes and evPhrase[1] and not evalObj:
+                        stripped = ap.stripTagset(evPhrase[1])
+                        evPhrase = (evPhrase[0] + stripped[0], stripped[1],
+                                    stripped[2] + evPhrase[2])
+#                        evalRes = ae.evalFirstSyn([word[0] for word in evPhrase[1]])
+                        evalObj = ae.evalObject([word[0] for word in evPhrase[1]])
+
+                        if evalObj:
+                            objlist.append(('_'.join([wt_pair[0] for wt_pair in evPhrase[1]]), evalObj))
+                        #objStr += ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + '\n'
+                        #objStr += str(evalObj).strip('[]')
+                        #objStr = objStr.replace(', ', '\n')
+                        #objStr += '\n\n'
+                        #temp : to deal with proper noun issues
+                        if 'NNP' in [word[1] for word in evPhrase[1]]:
+                            break
+#                        s_list = evalRes
+
+#                        w_orig = ' '.join([wt_pair[0] for wt_pair in evPhrase[1]])
+
+                        currw = '_'.join([wt_pair[0] for wt_pair in evPhrase[1]])
+
+                        #TODO REIMPLEMENT CHECK TO MAKE SURE NOT A DUPLICATE (cbrantle)
+#                        if currw in s_list:
+#                            s_list.remove(currw)
+
+                        if currw in used_words:
+                            break
+
+                        if not evalObj:
+                            break
+
+                        used_words.append(currw)
+                        print '-------------------------------------'
+                        print 'CurrW : ' + currw
+                        print 'EvalObj : ' + str(evalObj)
+                        print '-------------------------------------'
+
+                        repl_sent = '<br>'
+                        for definition in evalObj:
+                            repl_sent += '<input type="radio" name="' + currw + '" value="' + str(definition) + '">' + ' | '.join(definition.lemma_names) + '<br>'
+#                        repl_sent = '{ ' + ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + \
+#                            ' : ' + ' | '.join(s_list) + ' }'
+#                        repl_sent = '{{ ' + ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + ' }}'
+#                        repl_sent = repl_sent.replace('_', ' ')
+
+                        if currw == 'type':
+                            break
+
+                        r_sent = r_sent.replace(' '.join([word[0] for word in  \
+                         evPhrase[1]]), repl_sent)
+
+                        break
+
+        out_list.append(r_sent)
+
+    s = ''
+    for string in out_list:
+        s += string
+    return (s, objlist)
 
 def get_opts(intext):
     r_sents = ap.getRawSentences(intext)
@@ -112,7 +202,7 @@ else:
     usage = 'i7up.py [options] INPUT'
     parser = optparse.OptionParser(usage=usage)
 
-    parser.add_option('-i', '--input', action='store', type='string', dest='i', help='specify input file')
+#    parser.add_option('-i', '--input', action='store', type='string', dest='i', help='specify input file')
     parser.add_option('-o', '--output', action='store', type='string', dest='o', default='gen.out', help='specify output file')
     parser.add_option('-a', '--action', action='store', type='string', dest='a', default='full', help='specify action (full, annotate, generate)')
     parser.add_option('-f', '--formats', action='store', type='string', dest='sf', default='./resource/sFormats.in', help='specify format file')
@@ -130,9 +220,9 @@ wfmts = fmts[1]
 ffile.close()
 
 if __name__ == '__main__':
-    if not options.i:
-       print usage
-       quit()
+#    if not options.i:
+#       print usage
+#       quit()
     if not args:
        print 'missing file operand'
        print "try `i7up.py -h' for more information"
@@ -140,6 +230,7 @@ if __name__ == '__main__':
 
     if options.a == 'full' or options.a == 'annotate':
         annotate(args[0], options.o, options.sf)
+#        annotate(arg[0])
 
     if options.a == 'full':
         generate(options.o, options.o)
@@ -151,86 +242,7 @@ if __name__ == '__main__':
         ifile = open(args[0], 'r')
         ofile = open(options.o, 'w')
 
-        ofile.write(objgen(ifile.read()))
+        ofile.write('<!DOCTYPE html><head></head><body><pre>' + objgen(ifile.read())[0] + '</pre></body>')
         ifile.close()
         ofile.close()
 
-def objgen(itext):
-    r_sents = ap.getRawSentences(intext)
-    t_sents = ap.getTaggedSentences(r_sents)
-    assert len(r_sents) == len(t_sents)
-    rt_pairs = zip(r_sents, t_sents)
-
-    r_sents = []
-    out_list = []
-    used_words = []
-    objStr = ''
-    objlist = []
-
-    for pair in rt_pairs:
-        r_sent = pair[0]
-        t_sent = pair[1]
-        blacklisted = False
-
-        for fmt in bfmts:
-            if ap.checkMatchFormat(fmt, t_sent):
-                blacklisted = True
-                break
-
-        if not blacklisted:
-            for fmt in wfmts:
-                res = ap.checkMatchFormat(fmt, t_sent)
-                if res:
-                #cut off things until a valid phrase is found
-                    evPhrase = ([], res[0], [])
-                    evalRes = ae.evalFirstSyn([word[0] for word in evPhrase[1]])
-                    evalObj = ae.evalObject([word[0] for word in evPhrase[1]])
-                    while not evalRes and evPhrase[1] and not evalObj:
-                        stripped = ap.stripTagset(evPhrase[1])
-                        evPhrase = (evPhrase[0] + stripped[0], stripped[1],
-                                    stripped[2] + evPhrase[2])
-                        evalRes = ae.evalFirstSyn([word[0] for word in evPhrase[1]])
-                        evalObj = ae.evalObject([word[0] for word in evPhrase[1]])
-
-                        if evalRes and evalObj:
-                            objlist.append((' '.join([wt_pair[0] for wt_pair in evPhrase[1]]), evalObj))
-                        #objStr += ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + '\n'
-                        #objStr += str(evalObj).strip('[]')
-                        #objStr = objStr.replace(', ', '\n')
-                        #objStr += '\n\n'
-                        #temp : to deal with proper noun issues
-                        if 'NNP' in [word[1] for word in evPhrase[1]]:
-                            break
-                        s_list = evalRes
-
-                        w_orig = ' '.join([wt_pair[0] for wt_pair in evPhrase[1]])
-                        if s_list and w_orig in s_list:
-                            s_list.remove(w_orig)
-
-                        if not s_list:
-                            break
-
-                        if w_orig in used_words:
-                            break
-
-                        used_words.append(w_orig)
-
-                        repl_sent = '{ ' + ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + \
-                            ' : ' + ' | '.join(s_list) + ' }'
-
-                        repl_sent = repl_sent.replace('_', ' ')
-
-                        if 'type' in repl_sent:
-                            break
-
-                        r_sent = r_sent.replace(' '.join([word[0] for word in  \
-                         evPhrase[1]]), repl_sent)
-
-                        break
-
-#       out_list.append(r_sent)
-
-    s = ''
-    for string in out_list:
-        s += string
-    return objlist
