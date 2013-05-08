@@ -82,11 +82,11 @@
                 <input type="submit" value="Parse" class="btn"/>
               </form>
 
-              {% if htmlgenlist %}
+              {% if htmlgentext %}
                  <form name="textform" action="{{ pageurl }}" method="post">
                    {% csrf_token %}
 
-                   {% htmlgenlist %}
+                   {% htmlgentext %}
 
                  <input type="submit" value="Generate" />
                  </form>

@@ -10,29 +10,25 @@ def results(request):
     i7code = None
     if 'i7code' in request.POST:
         i7code = request.POST['i7code']
-    if i7code == 'Input your I7 Source here...':
+
+    if i7code:
+        request.session['rawcode'] = i7code
         return render(request, 'i7up/detail.html', {
-                'error_message' : "You didn't input your code!"
-                })
+            'opts' : i7.get_opts(i7code.encode("utf8","ignore"))
+        })
     else:
-        if i7code:
-            return render(request, 'i7up/detail.html', {
-                'opts' : i7.annotate(i7code.encode("utf8","ignore"))
-                })
-        else:
-            e_message = ''
-            for i, x in request.POST.iteritems():
-                try:
-                    #for lemma in x:
-                        e_message += 'Understand "' + x + '" as ' + i + '.\n'
-                except AttributeError:
-                    pass
+        e_message = ''
+        for i, x in request.POST.iteritems():
+            try:
+                #for lemma in x:
+                e_message += 'Understand "' + x + '" as ' + i + '.\n'
+            except AttributeError:
+                pass
             #print str(request.POST);
-            return render(request, 'i7up/detail.html', {
-                'error_message' : e_message,
-                'pageurl' : request.get_full_path()
-            })
-#        return HttpResponseRedirect(reverse('i7up:result', args=(i7code,)))
+        return render(request, 'i7up/detail.html', {
+            'error_message' : e_message,
+            'pageurl' : request.get_full_path()
+        })
 
 def gen_page(request):
     return render(request, 'i7up/detail.html', {})
