@@ -9,7 +9,7 @@ Use American Dialect.
 Part - Mechanics
 
 Chapter - Beginning the Story
-		
+
 Rule for printing the banner text while turn count is 1: say "".
 
 The player is in the Foyer.

@@ -5,6 +5,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^i7up/', include('i7up.urls', namespace="i7up")),
-    url(r'^polls/', include('polls.urls', namespace="polls")),
+#    url(r'^polls/', include('polls.urls', namespace="polls")),
     url(r'^admin/', include(admin.site.urls)),
 )

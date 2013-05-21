@@ -21,6 +21,8 @@ urlpatterns = patterns('',
     #        template_name='i7up/results.html'),
     #    name='results'),
     url(r'^results$', 'i7up.views.results', name='results'),
+    url(r'^contact$', 'i7up.views.contact_page', name='contact'),
+    url(r'^about$', 'i7up.views.about_page', name='about'),
 )
 urlpatterns += staticfiles_urlpatterns()
 

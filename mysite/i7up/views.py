@@ -14,7 +14,8 @@ def results(request):
     if i7code:
         request.session['rawcode'] = i7code
         htmlgentext, topts = i7.objgen(i7code)
-        htmlgentext = '<pre>' + htmlgentext + '</pre>'
+        htmlgentext = '<pre class="prew">' + htmlgentext + '</pre>'
+#        htmlgentext = htmlgentext.replace('\n', '<br />')
         return render(request, 'i7up/html-genned.html', {
 # TODO change opts to returned
             'opts' : i7.get_opts(i7code.encode("utf8","ignore")),
@@ -25,7 +26,11 @@ def results(request):
         for i, x in request.POST.iteritems():
             try:
                 #for lemma in x:
-                e_message += 'Understand "' + x + '" as ' + i + '.\n'
+                if i == 'csrfmiddlewaretoken':
+                    continue
+                l_list = request.POST.getlist(i.rstrip('[]'))
+                for lemma in l_list:
+                    e_message += 'Understand "' + lemma + '" as ' + i.rstrip('[]') + '.\n'
             except AttributeError:
                 pass
             #print str(request.POST);
@@ -36,3 +41,10 @@ def results(request):
 
 def gen_page(request):
     return render(request, 'i7up/html-genned.html', {})
+
+def about_page(request):
+    return render(request, 'i7up/about.html', {})
+
+def contact_page(request):
+    return render(request, 'i7up/contact.html', {})
+

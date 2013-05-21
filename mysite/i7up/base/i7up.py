@@ -58,9 +58,6 @@ def objgen(intext):
                                     stripped[2] + evPhrase[2])
 #                        evalRes = ae.evalFirstSyn([word[0] for word in evPhrase[1]])
                         evalObj = ae.evalObject([word[0] for word in evPhrase[1]])
-
-                        if evalObj:
-                            objlist.append(('_'.join([wt_pair[0] for wt_pair in evPhrase[1]]), evalObj))
                         #objStr += ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + '\n'
                         #objStr += str(evalObj).strip('[]')
                         #objStr = objStr.replace(', ', '\n')
@@ -85,18 +82,33 @@ def objgen(intext):
                             break
 
                         used_words.append(currw)
-                        print '-------------------------------------'
-                        print 'CurrW : ' + currw
-                        print 'EvalObj : ' + str(evalObj)
-                        print '-------------------------------------'
 
-                        repl_sent = '<br>'
-                        for definition in evalObj:
-                            repl_sent += '<input type="radio" name="' + currw + '" value="' + str(definition) + '">' + ' | '.join(definition.lemma_names) + '<br>'
+                        if evalObj:
+                            objlist.append(currw)
+
+                        repl_sent = ''
+                        repl_sent += '<button type=\'button\' id="' + currw +   \
+                                     '" class="btn btn-info" onclick=' +        \
+                                     '"javascript:expColl(\'' + currw +         \
+                                     '_wrapper\')">' + currw + '</button>'
+                        repl_sent += '<div id=' + currw + '_wrapper style=' +   \
+                                     '"overflow:hidden;display:none"><br /><pre>'
+                        for syn in evalObj:
+                            repl_sent += '<p><b>' + syn.definition + '</b><br />'
+                            for lemma in syn.lemma_names:
+                                repl_sent += '<input type="checkbox" name="' + \
+                                             currw +'" value="' + lemma +    \
+                                             '"> ' + lemma + '</input><br />'
+                            repl_sent += '</p>'
+
+                                #repl_sent += '<input type="radio" name="' + currw + '" value="' + str(syn) + '"> ' + ' | '.join(syn.lemma_names) + '<br>'
 #                        repl_sent = '{ ' + ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + \
 #                            ' : ' + ' | '.join(s_list) + ' }'
 #                        repl_sent = '{{ ' + ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + ' }}'
 #                        repl_sent = repl_sent.replace('_', ' ')
+                        repl_sent += '</pre></div>'
+                        #repl_sent += '<a href="javascript:expColl(\'' + currw + '_wrapper\',\'none\')">Hide</a>'
+                        #repl_sent += '<a href="javascript:expColl(\'' + currw + '_wrapper\',\'block\')">Expand</a>'
 
                         if currw == 'type':
                             break
@@ -145,23 +157,23 @@ def get_opts(intext):
                     evalObj = ae.evalObject([word[0] for word in evPhrase[1]])
                     while not evalRes and evPhrase[1] and not evalObj:
                         stripped = ap.stripTagset(evPhrase[1])
-                        evPhrase = (evPhrase[0] + stripped[0], stripped[1],
+                        evPhrase = (evPhrase[0] + stripped[0], stripped[1],     \
                                     stripped[2] + evPhrase[2])
-                        evalRes = ae.evalFirstSyn([word[0] for word in evPhrase[1]])
-                        evalObj = ae.evalObject([word[0] for word in evPhrase[1]])
+                        evalRes = ae.evalFirstSyn([word[0] for word in          \
+                                                   evPhrase[1]])
+                        evalObj = ae.evalObject([word[0] for word in            \
+                                                 evPhrase[1]])
 
                         if evalRes and evalObj:
-                            objlist.append((' '.join([wt_pair[0] for wt_pair in evPhrase[1]]), evalObj))
-                        #objStr += ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + '\n'
-                        #objStr += str(evalObj).strip('[]')
-                        #objStr = objStr.replace(', ', '\n')
-                        #objStr += '\n\n'
-                        #temp : to deal with proper noun issues
+                            objlist.append((' '.join([wt_pair[0] for wt_pair in \
+                                                      evPhrase[1]]), evalObj))
+
                         if 'NNP' in [word[1] for word in evPhrase[1]]:
                             break
                         s_list = evalRes
 
-                        w_orig = ' '.join([wt_pair[0] for wt_pair in evPhrase[1]])
+                        w_orig = ' '.join([wt_pair[0] for wt_pair in            \
+                                           evPhrase[1]])
                         if s_list and w_orig in s_list:
                             s_list.remove(w_orig)
 
@@ -173,8 +185,8 @@ def get_opts(intext):
 
                         used_words.append(w_orig)
 
-                        repl_sent = '{ ' + ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + \
-                            ' : ' + ' | '.join(s_list) + ' }'
+                        repl_sent = '{ ' + ' '.join([wt_pair[0] for wt_pair in  \
+                            evPhrase[1]]) + ' : ' + ' | '.join(s_list) + ' }'
 
                         repl_sent = repl_sent.replace('_', ' ')
 
