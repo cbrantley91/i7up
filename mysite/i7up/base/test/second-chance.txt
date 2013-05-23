@@ -227,15 +227,22 @@ The description of the bathroom counter is
 	"[if Worn House is happening]The grout in between the tiles is dark brown. There's a sink and a toothbrush container.
 	[otherwise if New House is happening]The counter gleams, the grout is light brown and smooth, and the sink and toothbrush container are spotless.[end if]".
 
+The verb to eat implies the eating action.
+
 The sink is scenery and a fixed in place story item in the Bathroom.
 The description of the sink is
 	"[if Worn House is happening]The sink is a yellowing white with gunk around the drain and a few strands of hair lying around.
 	[otherwise if New House is happening]The sink is a glittering white porcelain and the drain is polished steel.[end if]".
 
+The verb to play implies the playing relation.
+
+
 The toothbrushes are scenery and a fixed in place story item in the Bathroom.
 The description of the toothbrushes is
 	"[if Worn House is happening]The toothbrushes show signs of wear, the bristles not all pointing the same way. Brushing your teeth was always something you tolerated. Not great, but way better than the baths.
 	[otherwise if New House is happening]The toothbrushes don't seem to have ever been used. Your parents even got one with a cool design on it so you'd have more fun brushing your teeth.[end if]".
+
+The verb to draw implies the drawing action.
 
 The mirror is scenery and a fixed in place story item in the Bathroom.
 The description of the mirror is

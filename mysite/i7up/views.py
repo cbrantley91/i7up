@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect #, HttpResponse
 from django.core.urlresolvers import reverse
 from i7up.models import MyChoice, MyPoll
 import base.i7up as i7
+import base.relation_verbs as rv
 
 def results(request):
     #p = get_object_or_404(MyPoll, pk=poll_id)
@@ -12,25 +13,32 @@ def results(request):
         i7code = request.POST['i7code']
 
     if i7code:
+        i7code = i7code.encode('ascii', 'ignore')
         request.session['rawcode'] = i7code
         htmlgentext, topts = i7.objgen(i7code)
-        htmlgentext = '<pre class="prew">' + htmlgentext + '</pre>'
-#        htmlgentext = htmlgentext.replace('\n', '<br />')
+
+        # TODO FIX!!!
+        r_verbs = rv.main(i7code)
+        for pre_repl, post_repl in r_verbs:
+            htmlgentext = htmlgentext.replace(pre_repl, '<button type=\'button\' class="btn btn-success">' + post_repl + '</button>')
+        endtempstr = str(r_verbs)
+        htmlgentext = '<pre class="prew">' + htmlgentext + '\n-----------------------\n' + endtempstr + '</pre>'
+
         return render(request, 'i7up/html-genned.html', {
-# TODO change opts to returned
-            'opts' : i7.get_opts(i7code.encode("utf8","ignore")),
+            'opts' : topts,
             'htmlgentext' : htmlgentext
         })
     else:
-        e_message = ''
+        e_message = request.session['rawcode']
+
         for i, x in request.POST.iteritems():
             try:
-                #for lemma in x:
                 if i == 'csrfmiddlewaretoken':
                     continue
                 l_list = request.POST.getlist(i.rstrip('[]'))
                 for lemma in l_list:
-                    e_message += 'Understand "' + lemma + '" as ' + i.rstrip('[]') + '.\n'
+                    e_message += 'Understand "' + lemma + '" as ' +             \
+                     i.rstrip('[]') + '.\n'
             except AttributeError:
                 pass
             #print str(request.POST);
