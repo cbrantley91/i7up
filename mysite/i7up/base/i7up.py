@@ -93,13 +93,24 @@ def objgen(intext):
                                      '_wrapper\')">' + currw + '</button>'
                         repl_sent += '<div id=' + currw + '_wrapper style=' +   \
                                      '"overflow:hidden;display:none"><br /><pre>'
+                        curr_lemma_list = []
                         for syn in evalObj:
-                            repl_sent += '<p><b>' + syn.definition + '</b><br />'
+                            syn_text = '<p><b>' + syn.definition + '</b><br />'
+                            curr_syn_tot = 0
                             for lemma in syn.lemma_names:
-                                repl_sent += '<input type="checkbox" name="' + \
-                                             currw +'" value="' + lemma +    \
-                                             '"> ' + lemma + '</input><br />'
-                            repl_sent += '</p>'
+                                if lemma not in curr_lemma_list and lemma != currw:
+                                    syn_text += '<input type="checkbox" name="' + \
+                                                 currw +'" value="' + lemma +    \
+                                                 '"> ' + lemma + '</input><br />'
+                                    curr_lemma_list += lemma
+                                    curr_syn_tot += 1
+
+                            syn_text += '</p>'
+
+                            if curr_syn_tot == 0:
+                                continue
+
+                            repl_sent += syn_text
 
                                 #repl_sent += '<input type="radio" name="' + currw + '" value="' + str(syn) + '"> ' + ' | '.join(syn.lemma_names) + '<br>'
 #                        repl_sent = '{ ' + ' '.join([wt_pair[0] for wt_pair in evPhrase[1]]) + \
@@ -109,6 +120,9 @@ def objgen(intext):
                         repl_sent += '</pre></div>'
                         #repl_sent += '<a href="javascript:expColl(\'' + currw + '_wrapper\',\'none\')">Hide</a>'
                         #repl_sent += '<a href="javascript:expColl(\'' + currw + '_wrapper\',\'block\')">Expand</a>'
+
+                        if not curr_lemma_list:
+                            break
 
                         if currw == 'type':
                             break
