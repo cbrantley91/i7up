@@ -9,6 +9,7 @@
 
     <!-- Le styles -->
     <link href="./static/css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="./static/js/expand-collapse.js"></script>
     <style type="text/css">
       body {
@@ -62,7 +63,7 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        {% if opts %}
+        {% if is_opts %}
         <div class="span9">
           {% else %}
           <div class="span12">
@@ -97,13 +98,23 @@
           </div><!--/row-->
         </div><!--/span-->
 
-      {% if opts %}
+      {% if is_opts %}
+        {% load custom_filters %}
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              {% for opt in opts %}
-              <li><a href="#{{ opt }}">{{ opt }}</a></li>
+              {% if l_opts %}
+              <li class="nav-header">Synonyms</li>
+              {% for opt in l_opts %}
+              <li><a href="#{{ opt }}">{{ opt|underscore_to_space }}</a></li>
               {% endfor %}
+              {% endif %}
+              {% if v_opts %}
+              <li class="nav-header">Conjugations</li>
+              {% for opt in v_opts %}
+              <li><a href="#{{ opt }}">{{ opt|underscore_to_space }}</a></li>
+              {% endfor %}
+              {% endif %}
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

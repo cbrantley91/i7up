@@ -90,7 +90,7 @@ def objgen(intext):
                         repl_sent += '<button type=\'button\' id="' + currw +   \
                                      '" class="btn btn-info" onclick=' +        \
                                      '"javascript:expColl(\'' + currw +         \
-                                     '_wrapper\')">' + currw + '</button>'
+                                     '_wrapper\')">' + currw.replace('_', ' ') + '</button>'
                         repl_sent += '<div id=' + currw + '_wrapper style=' +   \
                                      '"overflow:hidden;display:none"><br /><pre>'
                         curr_lemma_list = []
@@ -101,7 +101,8 @@ def objgen(intext):
                                 if lemma not in curr_lemma_list and lemma != currw:
                                     syn_text += '<input type="checkbox" name="' + \
                                                  currw +'" value="' + lemma +    \
-                                                 '"> ' + lemma + '</input><br />'
+                                                 '"> ' + lemma.replace('_', ' ') \
+                                                 + '</input><br />'
                                     curr_lemma_list += lemma
                                     curr_syn_tot += 1
 
