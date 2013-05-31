@@ -1,0 +1,7 @@
+function expColl(id) {
+  var ele = document.getElementById(id);
+  if (ele.style.display != 'none')
+      ele.style.display = 'none';
+  else
+      ele.style.display = 'block';
+}

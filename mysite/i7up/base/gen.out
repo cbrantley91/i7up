@@ -106,14 +106,14 @@ The Foyer is a room.
 	[otherwise if Worn House is happening][first time]You can't believe your eyes! The front door slowly fills in its cracks with new wood and paint, rust dissolving from the hinges. The picture comes back into focus. The spines on the books stiffen and strengthen. [only]To the east is the foyer door. You can make out the picture now, a family portrait. The bookcase shines a little, the remnants of a lacquer applied a while ago, and book titles can be seen.
 	[otherwise if New House is happening][first time]The novelty of a house becoming newer still hasn't worn off. [only]The front door is beautiful, hand-crafted designs etched into the rich mahogany. The picture is crystal clear, as if it were printed yesterday. The books are clean and look like they've never been opened. To the east is the door to the Play Room.[end if]".
 
-The world is a fixed in place supporter in the Foyer. The world is scenery.
+The {{ world }} is a fixed in place supporter in the Foyer. The world is scenery.
 Instead of doing anything to the world, say "You can't be serious."
 
 The dust clouds are scenery in the Foyer. "You inhale a little dust and cough violently."
 
 Understand "clouds" as the dust clouds.
 
-The front door is a door and scenery. The front door is east of Unused and west of the Foyer. The front door is locked.
+The {{ front door }} is a door and scenery. The front door is east of Unused and west of the Foyer. The front door is locked.
 The description of the front door is 
 	"[if Decrepit House is happening]The hinges have rusted, orange and brown streaks, and the wood is splintered. You're not even sure the door would open.
 	[otherwise if Worn House is happening]The door shows signs of age: the hinges are discolored, the paint is starting to chip, and there are scuff marks at the base.
@@ -123,7 +123,7 @@ Instead of opening the front door, say "As you reach for the handle, it disappea
 
 The foyer door is a door and scenery. The foyer door is east of the Foyer and west of the Play Room. The foyer door is locked.
 
-The picture is a fixed in place story item in the Foyer. The picture is scenery. 
+The {{ picture }} is a fixed in place story item in the Foyer. The picture is scenery. 
 The description of the picture is 
 	"[if Decrepit House is happening]The frame is barely holding together. The picture is unrecognizeable from the decay and water damage.
 	[otherwise if Worn House is happening]The frame is simple, something your parent's picked up at a general store without much thought. It has been scratched and is a bit dusty. The picture is still clear, one of those silly family portrait settings where you all where matching attire.
@@ -197,7 +197,7 @@ The description of the inflatable ball is
 
 Understand "pile" or "pile of toys" as the toys.
 
-Understand "play with [something]" as examining.
+Understand "play with [something]" as {{ examining }}.
 
 The bathroom door is a door and scenery. The Bathroom Door is north of the Play Room and south of the Bathroom.
 
@@ -215,7 +215,7 @@ The description of the Bathroom is
 	"[if Worn House is happening]On your right is a [bathtub], off-white with rings in some corners from shampoo bottles that once sat there. On your left is the [bathroom counter], on which are some [toothbrushes]. Attached to the left wall is a large [mirror].
 	[otherwise if New House is happening]The bathtub enamel is a pure white, radiant and clean. The toothbrushes sit on the counter, their bristles stiff and unbent. The mirror is very clean.[end if]".
 
-The bathtub is scenery and a fixed in place story item in the Bathroom.
+The {{ bathtub }} is scenery and a fixed in place story item in the Bathroom.
 The description of the bathtub is
 	"[if Worn House is happening]You never cared for baths, still don't know a single child who did. Now you'd shower all day if you could, funny how things change.
 	[otherwise if New House is happening]The tub is beautiful, the water handles stainless steel and shining. How could you ever hate bathing in this?[end if]".
@@ -256,7 +256,7 @@ The yellow patterned wallpaper is scenery and story item in the Nursery.
 	"[if Worn House is happening]The thin twisting white lines form that familiar pattern that stretches up to the ceiling. Bits of drywall are visible through the wallpaper where it's peeling or torn.
 	[otherwise if New House is happening]The wallpaper gleams, from certain angles the wallpaper appears completely white from the reflection of the overhead light.[end if]".
 
-The crib is scenery and a story item in the Nursery.
+The {{ crib }} is scenery and a story item in the Nursery.
 	"[if Worn House is happening]This is where you slept for a long while. You don't rememeber it being so agitated, but you were just a little kid. You can now understand the futility of making the bed for a child, your parents must have given up at some point.
 	[otherwise if New House is happening]The pillow is fluffed and the blankets are tucked in and placed with precision. Nothing is out of place, it doesn't even seem used.[end if]".
 
@@ -268,7 +268,7 @@ The bed is scenery and a story item in the Nursery.
 	"[if Worn House is happening]Right where it should be in the crib.
 	[otherwise if New House is happening]Brand new and white as snow lying in the crib.[end if]".
 
-The mobile is a story item in the Nursery.
+The {{ mobile }} is a story item in the Nursery.
 	"[if Worn House is happening]Above the crib hangs a mobile of the solar system. Saturn is missing a [ring]. 
 	[otherwise if New House is happening]The whole solar system is on the mobile, and hey!, there's Saturn's [ring]. [end if]".
 The description of the mobile is "The complete solar system, even Pluto! Maybe you should take this with you, it's a memory of the past you don't want to forget.".
@@ -291,48 +291,9 @@ The brown cushy chair is scenery and a story item in the Nursery.
 	"[if Worn House is happening]Your parents used to read to you in this chair, and it shows. You can tell exactly where they sat just by the worn in pattern.
 	[otherwise if New House is happening]The chair is brand new, no marks, no scuffs. You miss those days when life was simple and you listened to your parents tell stories.[end if]".
 
-The dresser is scenery and a fixed in place story item in the Nursery.
+The {{ dresser }} is scenery and a fixed in place story item in the Nursery.
 	"[if Worn House is happening]The dresser has seen better days, but it still functions. You open and close the drawers, nothing of interest in there.
 	[otherwise if New House is happening]The dresser has thin painted lines on top, you can't remember them every being there, but it was in heavy use back then.[end if]".
 	
 Instead of opening the dresser,
 	try examining the dresser.
-
-[Generated Statements Below]
-Understand "universe" as world.
-Understand "existence" as world.
-Understand "creation" as world.
-Understand "cosmos" as world.
-Understand "macrocosm" as world.
-Understand "front door" as front door.
-Understand "front entrance" as front door.
-Understand "image" as picture.
-Understand "icon" as picture.
-Understand "ikon" as picture.
-Understand "book" as books.
-Understand "analyze" as examining.
-Understand "analyse" as examining.
-Understand "study" as examining.
-Understand "examine" as examining.
-Understand "canvass" as examining.
-Understand "canvas" as examining.
-Understand "bath" as bathroom.
-Understand "baby's room" as nursery.
-Understand "enigma" as mystery.
-Understand "secret" as mystery.
-Understand "closed book" as mystery.
-Understand "bathing tub" as bathtub.
-Understand "bath" as bathtub.
-Understand "tub" as bathtub.
-Understand "natural rubber" as rubber.
-Understand "India rubber" as rubber.
-Understand "gum elastic" as rubber.
-Understand "caoutchouc" as rubber.
-Understand "model" as patterned.
-Understand "pattern" as patterned.
-Understand "cot" as crib.
-Understand "Mobile" as mobile.
-Understand "Mobile River" as mobile.
-Understand "chest of drawers" as dresser.
-Understand "chest" as dresser.
-Understand "bureau" as dresser.
