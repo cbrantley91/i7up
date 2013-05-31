@@ -6,30 +6,29 @@ This is a simple Python webserver to dynamically generate usability enhancements
 
 Our program parses that input code and generates an html page with possible synonyms (to select from) for nouns/verbs so that the user doesn't have to go "verb-hunting".  For example, if the user were to create the object using "The bathtub is in the Bathroom.", I7UP will allow the user to selectively append:
 
-  * Understand "bath" as bathtub.
-  * Understand "tub" as bathtub.
-  * Understand "bathing tub" as bathtub.
+* Understand "bath" as bathtub.
+* Understand "tub" as bathtub.
+* Understand "bathing tub" as bathtub.
   
 using standard HTML tools (buttons/checkboxes)
 
 Also, if the user has defined any actions, it will conjugate those actions; the phrase:
 
-  The verb to draw is an action applying to a picture.
+<pre>The verb to draw is an action applying to a picture.</pre>
   
 gets expanded to cover all bases:
 
-  The verb to draw (you draw, he draws, she draws, they draw) is an action applying to a picture.
+<pre>The verb to draw (you draw, he draws, she draws, they draw) is an action applying to a picture.</pre>
   
 The code is a bit messy right now, but I will do my best to clean it up before I set this project to rest.  Currently, the code is only deployed on a private server with no outside accessibility, so you'll have to run it using:
 
-  python manage.py runserver
+<code>  python manage.py runserver </code>
   
 Required installs to run:
-
-  Python 3
-  Django 1.3
-  NLTK (Natural Language Toolkit)
-  (additionally, Nodebox is used, however, we included the source of that with the distribution)
+* Python 3
+* Django 1.3
+* NLTK (Natural Language Toolkit)
+* (additionally, Nodebox is used, however, we included the source of that with the distribution)
 
 ====
 
@@ -38,5 +37,5 @@ Beyond that, this was a collaborative effort between Chad Brantley and Tim Phan 
 
 Any questions, feel free to contact us via github, or email:
 
-  Chad Brantley: cbrantley91@gmail.com
-  Timothy Phan: tphan12@gmail.com
+*  Chad Brantley: cbrantley91@gmail.com 
+*  Timothy Phan: tphan12@gmail.com
