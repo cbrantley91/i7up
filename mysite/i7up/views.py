@@ -35,7 +35,11 @@ def results(request):
             'htmlgentext' : htmlgentext
         })
     else:
-        e_message = request.session['rawcode']
+        e_message = ''
+        if request.session:
+            if request.method == 'POST' and 'rawcode' in request.session:
+                e_message = request.session['rawcode']
+            request.session.delete()
 
         for i, x in request.POST.iteritems():
             try:
