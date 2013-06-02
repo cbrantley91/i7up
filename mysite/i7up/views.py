@@ -9,6 +9,7 @@ import base.relation_verbs as rv
 def results(request):
     #p = get_object_or_404(MyPoll, pk=poll_id)
     i7code = None
+
     if 'i7code' in request.POST:
         i7code = request.POST['i7code']
 
@@ -21,8 +22,12 @@ def results(request):
         # TODO FIX!!!
         r_verbs = rv.main(i7code)
         for v_phrase, conj_phrase, pre_repl, post_repl in r_verbs:
-#            htmlgentext = htmlgentext.replace(pre_repl, '<button type=\'button\' class="btn btn-success" id="' + v_phrase.replace(" ", "_") + '">' + post_repl + '</button>')
-            htmlgentext = htmlgentext.replace(pre_repl, pre_repl.replace(v_phrase, '<button type=\'button\' class="btn btn-success" id="' + v_phrase.replace(" ", "_") + '" onclick="javascript:toggleConj(\'' + v_phrase.replace(" ", "_") + '\')" repltext="' + v_phrase + ' ' + conj_phrase + '">' + v_phrase + '</button>') + '<script> $(\'#' + v_phrase.replace(' ', '_') + '\').click(function() {var temp = $(this).text(); $(this).text($(this).attr(\'repltext\')); $(this).attr(\'repltext\', temp);});</script>')
+            htmlgentext = htmlgentext.replace(pre_repl, pre_repl.replace( \
+                v_phrase,
+                '<button type=\'button\' class="btn btn-success" id="' + v_phrase.replace(" ", "_") + '" repltext="' + v_phrase + ' ' + conj_phrase + '">' + v_phrase + '</button>') + \
+                                              '<div id="' + v_phrase.replace(" ", "_") + '-wrap"><input type="checkbox" id="val" value="' + pre_repl + '|' + post_repl + '" name="conj|' + v_phrase + '"></input></div>' + '\n<script> $(\'#' + v_phrase.replace(' ', '_') + '\').click(function() {var temp = $(this).text();\n$(this).text($(this).attr(\'repltext\'));\n$(this).attr(\'repltext\', temp);\nvar curr_checked=$("#' + v_phrase.replace(' ', '_') + '-wrap :input").prop("checked"); console.log("curr_checked : " + curr_checked); if (curr_checked) {$("#' + v_phrase.replace(' ', '_') + '-wrap :input").prop("checked", false);} else { $("#' + v_phrase.replace(' ', '_') + '-wrap :input").prop("checked", true);}})</script>')
+#$(\'#' + v_phrase.replace(' ', '_') + '-wrap :input\').prop(\'checked\', !$(\'#' + v_phrase.replace(' ', '_') + ' :input\').prop(\'checked\'));});</script>')
+
             v_opts.append(v_phrase.replace(" ", "_"))
 
         endtempstr = str(r_verbs)
@@ -40,6 +45,10 @@ def results(request):
             if request.method == 'POST' and 'rawcode' in request.session:
                 e_message = request.session['rawcode']
             request.session.delete()
+
+        for i, x in request.POST.iteritems():
+            print 'key: ', i
+            print 'value: ', x
 
         for i, x in request.POST.iteritems():
             try:
