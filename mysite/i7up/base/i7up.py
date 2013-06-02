@@ -100,7 +100,7 @@ def objgen(intext):
                             for lemma in syn.lemma_names:
                                 if lemma not in curr_lemma_list and lemma != currw:
                                     syn_text += '<input type="checkbox" name="' + \
-                                                 currw +'" value="' + lemma +    \
+                                                 'syn|' + currw +'" value="' + lemma +    \
                                                  '"> ' + lemma.replace('_', ' ') \
                                                  + '</input><br />'
                                     curr_lemma_list += lemma

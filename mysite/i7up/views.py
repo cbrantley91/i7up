@@ -25,7 +25,7 @@ def results(request):
             htmlgentext = htmlgentext.replace(pre_repl, pre_repl.replace( \
                 v_phrase,
                 '<button type=\'button\' class="btn btn-success" id="' + v_phrase.replace(" ", "_") + '" repltext="' + v_phrase + ' ' + conj_phrase + '">' + v_phrase + '</button>') + \
-                                              '<div id="' + v_phrase.replace(" ", "_") + '-wrap"><input type="checkbox" id="val" value="' + pre_repl + '|' + post_repl + '" name="conj|' + v_phrase + '"></input></div>' + '\n<script> $(\'#' + v_phrase.replace(' ', '_') + '\').click(function() {var temp = $(this).text();\n$(this).text($(this).attr(\'repltext\'));\n$(this).attr(\'repltext\', temp);\nvar curr_checked=$("#' + v_phrase.replace(' ', '_') + '-wrap :input").prop("checked"); console.log("curr_checked : " + curr_checked); if (curr_checked) {$("#' + v_phrase.replace(' ', '_') + '-wrap :input").prop("checked", false);} else { $("#' + v_phrase.replace(' ', '_') + '-wrap :input").prop("checked", true);}})</script>')
+                                              '<div id="' + v_phrase.replace(" ", "_") + '-wrap" style="display:none;"><input type="checkbox" id="val" value="' + pre_repl + '|' + post_repl + '" name="conj|' + v_phrase + '"></input></div>' + '\n<script> $(\'#' + v_phrase.replace(' ', '_') + '\').click(function() {var temp = $(this).text();\n$(this).text($(this).attr(\'repltext\'));\n$(this).attr(\'repltext\', temp);\nvar curr_checked=$("#' + v_phrase.replace(' ', '_') + '-wrap :input").prop("checked"); console.log("curr_checked : " + curr_checked); if (curr_checked) {$("#' + v_phrase.replace(' ', '_') + '-wrap :input").prop("checked", false);} else { $("#' + v_phrase.replace(' ', '_') + '-wrap :input").prop("checked", true);}})</script>')
 #$(\'#' + v_phrase.replace(' ', '_') + '-wrap :input\').prop(\'checked\', !$(\'#' + v_phrase.replace(' ', '_') + ' :input\').prop(\'checked\'));});</script>')
 
             v_opts.append(v_phrase.replace(" ", "_"))
@@ -43,21 +43,25 @@ def results(request):
         e_message = ''
         if request.session:
             if request.method == 'POST' and 'rawcode' in request.session:
-                e_message = request.session['rawcode']
+                e_message = request.session['rawcode'] + '\n[Generated Below]\n\n'
             request.session.delete()
 
-        for i, x in request.POST.iteritems():
-            print 'key: ', i
-            print 'value: ', x
-
-        for i, x in request.POST.iteritems():
+        for key, value in request.POST.iteritems():
+            print "Key: ", key
+            print "Value: ", value
             try:
-                if i == 'csrfmiddlewaretoken':
+                if key == 'csrfmiddlewaretoken':
                     continue
-                l_list = request.POST.getlist(i.rstrip('[]'))
-                for lemma in l_list:
-                    e_message += 'Understand "' + lemma + '" as ' +             \
-                     i.rstrip('[]') + '.\n'
+
+                method, orig = key.split('|')
+                if method == 'syn':
+                    l_list = request.POST.getlist(key.rstrip('[]'))
+                    for lemma in l_list:
+                        e_message += 'Understand "' + lemma.replace('_', ' ') + '" as ' + orig.replace('_', ' ') + '.\n'
+                elif method == 'conj':
+                    print "conj prob: " + value
+                    pre_repl, post_repl = value.split('|')
+                    e_message = e_message.replace(pre_repl, post_repl)
             except AttributeError:
                 pass
             #print str(request.POST);
